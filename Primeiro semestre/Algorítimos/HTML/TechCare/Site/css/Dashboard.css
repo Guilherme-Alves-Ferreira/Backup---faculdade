@@ -1,0 +1,170 @@
+header {
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all .5s ease;
+}
+
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rbga(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+ul li:hover a{
+    padding-left: 50px;
+}
+
+.slidebar ul a i{
+    margin-right: 16px;
+}
+
+#check{
+    display: none; 
+}
+
+label #btn,label #cancel{
+    position: absolute;
+    cursor: pointer;
+}
+
+label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #fff;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+
+#check:checked ~ section{
+    margin-left: 250px;
+}
+
+section{
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .5s;
+
+}
+
+.box1 {
+    padding-top: 250px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+#logo {
+    margin: 0;
+    margin-top: 30px;
+}
+
+.text1{
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: text1 3s 1;
+    font-size: 400%;
+    color: #fff;
+    margin: 0;
+}
+
+.text2 {
+    font-size: 230%;
+    font-family: 'Arial'; 
+    color: #fff;
+}               
+
+@keyframes text1 {
+    0%{
+        margin-bottom: -40px;
+    }
+    30%{
+        color:#0e283a;
+        letter-spacing: 30px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px; 
+    }
+}
+
+#content {
+    position: relative;
+    animation-name: content;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content {
+    0%   {right: -1900px}
+    100% {right: 3px}
+}
+
+#content2 {
+    position: relative;
+    animation-name: content2;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content2 {
+    0%   {left: -2000px}
+    100% {left: 3px}
+}

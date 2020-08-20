@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Times</h1>
+
+        <br>
+
+        <input id="time_bom" type="text" placeholder="Digite o nome de um time bom">
+
+        <br><br>
+
+        <input id="time_ruim" type="text" placeholder="Digite o nome de um time ruim">
+
+        <br><br>
+
+        <button onclick="repetir()">Repetir a realidade!</button>
+
+        <br><br>
+
+        <span id="frase"></span>
+
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    function repetir() {
+
+        var qtd_frases = 1;
+
+        var time1 = time_bom.value;
+
+        var time2 = time_ruim.value;
+
+        frase.innerHTML = '';
+
+        while (qtd_frases <= 10) {
+            frase.innerHTML += `<b>${time1}</b> É melhor do que o <b>${time2}</b> <br>`;
+            qtd_frases++;
+        }
+    }
+
+
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Frases 2.0...</h1>
+        <br>
+        <b>Informe uma frase</b>
+        <input type="text" id="inpt_senha" onkeyup="digitando()">
+        <br><br>
+        <b id="resultado"></b>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+
+    function digitando() {
+        resultado.innerHTML = '';
+        var frase = inpt_senha.value;
+        var tamanho_frase = frase.length
+
+
+        for (posicao = 0; posicao < tamanho_frase; posicao++) {
+            var letra = frase[posicao];
+            resultado.innerHTML += `${letra} <br>`;
+        }
+    }
+</script>

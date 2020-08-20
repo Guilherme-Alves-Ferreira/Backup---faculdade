@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Autenticador</h1>
+
+        <br>
+
+        <input type="text" placeholder="Login" style="text-align: center;" id="input_login">
+        
+        <br><br>
+
+        <input type="text" placeholder="Senha" style="text-align: center;" id="input_senha">
+
+        <br><br>
+
+        <button onclick="Entrar()">Entrar</button>
+
+        <div id="mensagem"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function Entrar() {
+
+        var login = input_login.value;
+
+        var senha = input_senha.value;
+
+        if (login == "aidimim" && senha == "seinha") {
+            mensagem.innerHTML = "<span style='color: blue'>Usuário autenticado com sucesso!</span>"
+        }else {
+            mensagem.innerHTML = "<span style='color: red'>Login e/ou senha inválido(s)</span>"
+        }
+    }
+</script>

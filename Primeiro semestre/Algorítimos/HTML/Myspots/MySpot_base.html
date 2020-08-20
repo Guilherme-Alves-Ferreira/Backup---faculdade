@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Spot</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body style=" background-image: url(fundo_borrado2.jpg);">
+    <style>
+        body {
+            background-attachment: fixed;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: black;
+     }
+    </style>
+    
+<br><br><br>
+
+<div style="background-color:rgba(112, 128, 144, 0.507); height: 135px;">
+<div style="float: left; width: 100px; height: 1px;"></div> <div style="text-align: left;"><img onclick="pag_principal()" style="width: 100px; float: left;" src="ícone.png"></div><br><br> <div style="float: left; width: 80px; height: 1px;"></div>
+<div style="color: white; float: left; width: 220px; height: 1px;"><img id="home_img" onmouseover="cresce_home()" onclick="pag_principal()" style="height: 60px;" src="Home.png"></div>
+<div style="color: white; float: left; width: 220px; height: 1px;"><img id="services_img" onmouseover="cresce_services()" onclick="butt_servicos()" style="height: 60px;" src="Services.png"></div>
+<div style="color: white; float: left; width: 240px; height: 1px;"><img id="product_img" onmouseover="cresce_products()" onclick="butt_produto()" style="height: 60px;" src="Products.png"></div>
+
+
+<div style="float: right; width: 350px; height: 1px;">
+    <img id="img_signup" onmouseover="cresce_signup()" onclick="login()" style="height: 80px;" src="signup.png">
+</div> 
+</div> <br><br><br><br><br><br><br><br><br><br>
+
+<div id="div_home" style="text-align: center;">
+    <img src="ícone.png" style="height: 125px;"><br><br>
+    <h1 style="color: white; font-size: 300%; font-family: 'Gill Sans';">My Spot</h1>
+</div>
+
+<div id="div_produto" style="text-align: justify; display: none;">
+
+    <div style="background-color: rgba(0, 0, 0, 0.664); width: 30%; height: 200px; border-radius: 20px;"> 
+<br><br>
+            <span style="color: white; font-family: Georgia; font-size: 150%;"> 
+            <b>O que é?</b> 
+<br> 
+                My Spot é uma interface para o facilitamento
+                do acesso à vagas públicas ou privadas.
+            </span>
+    </div>    
+
+<br><br>
+
+    <div style="background-color: rgba(0, 0, 0, 0.664); width: 30%; height: 200px; border-radius: 20px;">
+<br><br>
+            <span style="color: white; font-family: Georgia; font-size: 150%;">     
+            <b>Por que?</b>
+<br>
+                A solução foi desenvolvida para exibir quais são
+                e onde estão as vagas disponíveis.
+            </span>
+    </div>
+
+<br><br>
+
+    <div style="background-color: rgba(0, 0, 0, 0.664); width: 30%; height: 230px; border-radius: 20px;">
+        <br><br>
+                    <span style="color: white; font-family: Georgia; font-size: 150%;">     
+                    <b>Como?</b>
+        <br>
+                        Sensores de proximidade serão instalados em frente às vagas
+                        para determinar se a mesma está ocupada ou não e fornecer dados
+                        sobre quantas vezes e em quais horários aquele vaga é ocupada.
+                    </span>
+            </div>
+</div>
+
+
+<div id="div_servicos" style="text-align: justify; display: none;">
+
+    <div style="background-color: rgba(0, 0, 0, 0.664); width: 38%; height: 750px; border-radius: 20px;">
+        <br><br>
+                    <span style="color: white; font-family: Georgia; font-size: 150%;">     
+                    <p style="font-size:60px">My Spot <b style="color: royalblue">ROYAL</b></p> 
+        <br>
+                        Este é um serviço direcionado para os estacionamentos privados, ou seja
+                        para shoppings, estádios, campos, aeroportos, etc... <br><br><br>
+                        
+                        O My Spot <b style="color: royalblue;">Royal</b> fornecerá aos clientes da empresa contratante 
+                        a possibilidade de reservar uma vaga no seu estacionamento
+                        de forma que ele receba um QR Code por SMS ou E-Mail e ao apresentar o mesmo para um leitor,
+                        sua entrada será liberada e o sensor de proximidade avisará aos gerenciadores do local que 
+                        aquela determinada vaga foi ocupada. Além de dadados que podem ser acessados pelos usuários,
+                        indicando os horários mais vazios, vagas que são menos e mais ocupadas e quanto tempo as pessoas
+                        costumam ficar em seus estabelecimentos. <br>
+
+                        A empresa também terá acesso à todos os dados e gráficos de lotação que serão gerados pelo 
+                        sensor durante seu uso.
+                    </span>
+            </div>
+            
+<br><br><br>
+
+    <div style="background-color: rgba(0, 0, 0, 0.664); width: 38%; height: 750px; border-radius: 20px; float: right;">
+        <br><br>
+                    <span style="color: white; font-family: Georgia; font-size: 150%;">     
+                        <p style="font-size:60px">My Spot <b style="color:coral">PUBLIC</b></p> 
+        <br>
+                        Este serviço é mais indicado para orgãos governamentais ou empresas com estacionamentos publicos,
+                        uma vez que não haverá possibildiade de reservar vagas. <br><br><br>               
+
+                        O My Spot <b style="color: coral;">Public</b> fornecerá aos clientes da empresa contratante 
+                        dados sobre o uso das vagas do estacionamento, para saber aproximadamente a lotação em um determinado 
+                        horário, quais vagas costumam ser ocupadas mais vezes e quanto tempo as pessoas constumam deixar seus 
+                        carros no estacionamento. <br>
+
+                        A empresa também terá acesso à todos os dados e gráficos de lotação que serão gerados pelo 
+                        sensor durante seu uso.
+                    </span>
+            </div>
+
+
+
+
+</div>
+
+<div id="Div_Login" style="text-align: center; display: none;">
+    <img style="width: 125px;" src="ícone.png"><br><br>
+    <center><b id="login_e" style="color: white; font-size: 110%;  width: 52%;">Login:</b>
+    <div class="form-group col-md-4">
+    <input id="login" class="form-control" style="text-align: center; width: 50%;" type="text" onkeypress="$(this).mask('000.000.000-00')" placeholder="Digite seu CPF"></div></center>
+    <br>
+    <center><b id="senha_e" style="color: white; font-size: 110%;">Senha:</b>
+    <div class="form-group col-md-4">
+    <input id="senha" class="form-control" style="text-align: center; width: 50%;" type="password" placeholder="Digite sua senha"></div></center> <br><br>
+    
+     <button onclick="Fazer_login()">Login</button>
+     <button onclick="butt_cadastro()"> Cadastrar-se</button> <br><br>
+     <button onclick="Mudar_senha()">Esqueci minha senha</button><br>
+</div>
+
+<br><br><br>
+
+<div id="Boas_vindas" style="display: none; text-align: center;"><br><br><br><br><br><br>
+    <b><h1 style="color: white; font-size: 170%;">Olá!</h1></b>
+    <h2 style="color: white; font-size: 150%;">Carregando seu perfil...</h2>
+</div>
+
+
+<div id="inputs_cadastro" style="text-align: center; display: none;">
+    <center><h2 style="text-align: center; color: white; font-size: 150%;">Insira seus dados nos campos abaixo:</h2>
+    <div class="form-group col-md-4">
+    <input class="form-control" style="text-align: center; width: 50%;" type="text" placeholder="Nome completo"></div><br><br>
+    <div class="form-group col-md-4">
+    <input class="form-control" style="text-align: center; width: 50%;" type="text" onkeypress="$(this).mask('00/00/0000')" placeholder="Data de Nascimento"></div><br><br>
+    <div class="form-group col-md-4">
+    <input class="form-control" style="text-align: center; width: 50%;" type="text" onkeypress="$(this).mask('000.000.000-00')" placeholder="Digite seu CPF"></div><br><br>
+    <div class="form-group col-md-4">
+    <input class="form-control" style="text-align: center; width: 50%;" type="number" onkeypress="$(this).mask('00000000000')" placeholder="Digite o número CNH"></div><br><br>
+    <div class="form-group col-md-4">
+    <input class="form-control" style="text-align: center; width: 50%;" type="text" placeholder="Endereço de E-Mail"></div><br><br>
+    <div class="form-group col-md-4">
+    <input class="form-control" style="text-align: center; width: 50%;" type="text" onkeypress="$(this).mask('00+ (00) 00000-0000')" placeholder="55+ (11)..."></div><br><br>
+    <div class="form-group col-md-4">
+    <input class="form-control" style="text-align: center; width: 50%;" type="password" placeholder="Digite sua senha"></div><br><br>
+    <div class="form-group col-md-4">
+    <input class="form-control" style="text-align: center; width: 50%;" type="password" placeholder="Confirme sua senha"></div></center><br><br>
+    <button onclick="button_cadastro2()" style="width: 7%;">Próximo</button>
+</div>
+    
+<div id="div_def" style="text-align: center; display: none"><br><br><br>
+    <h2 style="color: white;">Possui alguma deficiência?</h2>
+    <span style="color: white; font-size: 140%;">SIM</span> <input onclick="sim_def()" name="rdbGender" id="rdbGender" style="text-align: center; width: 20px; height: 20px;" type="radio">
+    <span style="color: white; font-size: 140%;">NÃO</span> <input onclick="nao_def()" name="rdbGender" id="rdbGender" style="text-align: center; width: 20px; height: 20px;" type="radio"><br><br>
+        <div id="Input_Def" style="text-align: center; display: none">
+            <center><div class="form-group col-md-4">
+            <input class="form-control" style="text-align: center; width: 50%;" type="text" placeholder="Tipo de deficiência"></div></center><br><br>
+            <center><div class="form-group col-md-4">
+            <input class="form-control" style="text-align: center; width: 50%;" type="text" onkeypress="$(this).mask('000.000.000-0')" placeholder="Número do INSS"></div></center><br><br>
+        </div>
+    <button onclick="Cadastro_realizado()" style="width: 7%;">Cadastrar</button><br><br>
+    <button onclick="Voltar_cadastro1()" style="width: 6%;">Voltar</button>
+    <button onclick="Voltar_para_começo()" style="width: 10%;">Cancelar cadastro</button>
+    
+</div><br><br><br><br>
+
+<div id="Cadastro_feito" style="display: none; text-align: center;">
+    <h1 style="text-align: center; color:white;">Parabéns! Seu cadastro foi realizado com sucesso!!</h1>
+    <button onclick="back_to_login()" style="width: 9%;">Retornar ao login</button>
+</div>
+
+<div id="Alterar_senha" style="display: none; text-align: center;">
+    <h2 style="color: white;">Enviaremos um Email para você poder redefinir sua senha!</h2><br>
+<br><br> 
+    <center><div class="form-group col-md-4">
+    <input class="form-control" style="text-align: center; width: 50%;" type="text" placeholder="Endereço de E-Mail"></div></center><br><br>
+    <button onclick="Enviar_email()" style="width: 7%;">Enviar</button>
+</div>
+    
+<div id="Email_Enviado" style="display: none; text-align: center;">
+    <h1 style="color: white; text-align: center;">Email enviado com sucesso!! Verifique sua caixa de entrada!</h1><br>
+    <button onclick="back_to_login()"style="width: 9%;">Retornar ao login</button>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div style="background-color:rgba(98, 99, 100, 0.897); height: 112px; text-align:right; background-attachment: fixed;">
+<br>
+    
+    <div style="width: 20%; height: 1px;"> 
+        <a href="https://www.instagram.com/my.spot_/?hl=pt-br">
+            <img id="img_insta" onmouseover="insta_grande()" src="insta.png" style="height: 75px;">
+        </a> 
+    </div>  
+    
+    <div style="width: 40%; height: 1px;">
+        <a href="https://www.facebook.com/My-Spot-103935477897078/?modal=admin_todo_tour">
+            <img id="img_face" onmouseover="face_grande()" src="face.png" style="height: 83px;">
+        </a>
+    </div> 
+
+    <div style="width: 60%; height: 1px;"> 
+        <a href="">
+            <img id="img_github" onmouseover="github_grande()" src="github.png" style="height: 75px;">
+        </a>
+    </div> 
+    
+    <div style="width: 80%; height: 1px;">
+        <a href="">
+            <img id="img_twt" onmouseover="twt_grande()" src="twt.png" style="height: 75px;">
+        </a>
+    </div>
+
+
+</div>
+
+</body>
+</html>
+
+<script>
+
+function cresce_signup() {
+    img_signup.style.height = '90px'
+    home_img.style.height = '60px'
+    services_img.style.height = '60px'
+    product_img.style.height = '60px'
+}
+
+function cresce_home() {
+    home_img.style.height = '70px'
+    services_img.style.height = '60px'
+    product_img.style.height = '60px'
+    img_signup.style.height = '80px'
+}
+
+function cresce_services() {
+    home_img.style.height = '60px'
+    services_img.style.height = '70px'
+    product_img.style.height = '60px'
+    img_signup.style.height = '80px'
+}
+
+function cresce_products() {
+    home_img.style.height = '60px'
+    services_img.style.height = '60px'
+    product_img.style.height = '70px'
+    img_signup.style.height = '80px'
+}
+
+function pag_principal() {
+    Div_Login.style.display = 'none'
+    Boas_vindas.style.display = 'none'
+    inputs_cadastro.style.display = 'none'
+    Alterar_senha.style.display = 'none'
+    div_def.style.display = 'none'
+    Cadastro_feito.style.display = 'none'
+    Email_Enviado.style.display = 'none'
+    div_produto.style.display = 'none'
+    div_servicos.style.display = 'none'
+    div_home.style.display = 'block'
+}
+
+function butt_servicos() {
+    Div_Login.style.display = 'none'
+    Boas_vindas.style.display = 'none'
+    inputs_cadastro.style.display = 'none'
+    Alterar_senha.style.display = 'none'
+    div_def.style.display = 'none'
+    Cadastro_feito.style.display = 'none'
+    Email_Enviado.style.display = 'none'
+    div_home.style.display = 'none'
+    div_produto.style.display = 'none'
+    div_servicos.style.display = 'block'
+}
+
+function butt_produto() {
+    Div_Login.style.display = 'none'
+    Boas_vindas.style.display = 'none'
+    inputs_cadastro.style.display = 'none'
+    Alterar_senha.style.display = 'none'
+    div_def.style.display = 'none'
+    Cadastro_feito.style.display = 'none'
+    Email_Enviado.style.display = 'none'
+    div_home.style.display = 'none'
+    div_servicos.style.display = 'none'
+    div_produto.style.display = 'block'
+    
+}
+
+function login() {
+    div_home.style.display = 'none'
+    Boas_vindas.style.display = 'none'
+    inputs_cadastro.style.display = 'none'
+    Alterar_senha.style.display = 'none'
+    div_def.style.display = 'none'
+    Cadastro_feito.style.display = 'none'
+    Email_Enviado.style.display = 'none'
+    div_produto.style.display = 'none'
+    div_servicos.style.display = 'none'
+    Div_Login.style.display = 'block'
+}
+
+function Fazer_login() {
+    Div_Login.style.display = 'none'
+    Boas_vindas.style.display = 'block'
+}
+
+function butt_cadastro() {
+     inputs_cadastro.style.display = 'block'
+     Div_Login.style.display = 'none'
+}
+
+function button_cadastro2() {
+    inputs_cadastro.style.display = 'none'
+    div_def.style.display = 'block'
+}
+
+function Voltar_cadastro1() {
+    inputs_cadastro.style.display = 'block'
+    Input_Def.style.display = 'none'
+    div_def.style.display = 'none'
+}
+
+function sim_def() {
+    Input_Def.style.display = 'block'
+}
+
+function nao_def() {
+    Input_Def.style.display = 'none'
+}
+
+function Cadastro_realizado() {
+    Cadastro_feito.style.display = 'block'
+    Input_Def.style.display = 'none'
+    div_def.style.display = 'none'
+}
+
+function Voltar_para_começo() {
+    div_def.style.display = 'none'
+    Input_Def.style.display = 'none'
+    inputs_cadastro.style.display = 'none'
+    Alterar_senha.style.display = 'none'
+    Div_Login.style.display = 'block'
+}
+
+function back_to_login() {
+    Cadastro_feito.style.display = 'none'
+    Email_Enviado.style.display = 'none'
+    Div_Login.style.display = 'block'
+}
+
+function Enviar_email() {
+    Email_Enviado.style.display = 'block'
+    Alterar_senha.style.display = 'none'
+}
+
+function Mudar_senha() {
+    Alterar_senha.style.display = 'block'
+    Div_Login.style.display = 'none'
+}
+
+function insta_grande() {
+    img_insta.style.height = '85px'
+    img_face.style.height = '83px'
+    img_github.style.height = '75px'
+    img_twt.style.height = '75px'
+}
+
+function face_grande() {
+    img_insta.style.height = '75px'
+    img_face.style.height = '87px'
+    img_github.style.height = '75px'
+    img_twt.style.height = '75px'
+}
+
+function github_grande() {
+    img_insta.style.height = '75px'
+    img_face.style.height = '83px'
+    img_github.style.height = '85px'
+    img_twt.style.height = '75px'
+}
+
+function twt_grande() {
+    img_insta.style.height = '75px'
+    img_face.style.height = '83px'
+    img_github.style.height = '75px'
+    img_twt.style.height = '85px'
+}
+</script>

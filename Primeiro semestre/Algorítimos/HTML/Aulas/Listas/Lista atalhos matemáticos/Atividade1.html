@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Jogo de dados</h1>
+    </center>
+
+    <br>
+
+    <button style="float: left; margin-left: 830px;" onclick="dado_jogador1()">Jogador 1</button>
+
+    <br><br>
+
+    <div style="float: left; margin-left: 830px;" id="resultado1"></div>
+
+    <button style="float: right; margin-right: 830px; margin-top: -35px;" onclick="dado_jogador2()">Jogador 2</button>
+
+    <br><br>
+
+    <div style="float: right; margin-right: 830px; margin-top: -35px;" id="resultado2"></div>
+
+    <center>
+    <b id="resultado_jogo"></b>
+</center>
+    
+</body>
+</html>
+
+<script>
+
+var jogador1 = 0;
+
+var jogador2 = 0;
+
+    function dado_jogador1() {
+
+        jogador1 = parseInt (Math.random() * 6) + 1;
+
+        resultado1.innerHTML = jogador1;
+
+        if (jogador2 == 0) {
+        }else if (jogador1 > jogador2) {
+            resultado_jogo.innerHTML = 'Jogador 1 venceu';
+        }else if (jogador1 < jogador2) {
+            resultado_jogo.innerHTML = 'Jogador 2 venceu';
+        }else {
+            resultado_jogo.innerHTML = 'Empate!';
+        }
+    }
+
+    function dado_jogador2() {
+        
+        jogador2 = parseInt (Math.random() * 6) + 1;
+
+        resultado2.innerHTML = jogador2;
+
+        if (jogador1 == 0) {
+        }else if (jogador1 > jogador2) {
+            resultado_jogo.innerHTML = 'Jogador 1 venceu';
+        }else if (jogador1 < jogador2) {
+            resultado_jogo.innerHTML = 'Jogador 2 venceu';
+        }else {
+            resultado_jogo.innerHTML = 'Empate!';
+        }
+    }
+        
+
+</script>

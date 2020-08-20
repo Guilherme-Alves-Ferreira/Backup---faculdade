@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Expressador de amor</h1>
+
+        <br>
+
+        <input id="input_nome_idolo" type="text" placeholder="Digite o nome do seu ídolo">
+
+        <br><br>
+
+        <input id="amor" type="text" placeholder="Quanto você o(a) ama?">
+
+        <br><br>
+
+        <button onclick="medir()">Expressar amor</button>
+
+        <br>
+
+        <span id="frase"></span>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function medir() {
+
+        var qtd_amor = Number (amor.value);
+
+        var qtd_frases = 0;
+
+        var nome = input_nome_idolo.value;
+
+        frase.innerHTML = '';
+
+        while (qtd_frases < qtd_amor) {
+            frase.innerHTML += `<b>${nome}</b>, eu te amo! <i>sempre lembre disso!</i> <br>`;
+            qtd_frases++;
+        }
+    }
+</script>

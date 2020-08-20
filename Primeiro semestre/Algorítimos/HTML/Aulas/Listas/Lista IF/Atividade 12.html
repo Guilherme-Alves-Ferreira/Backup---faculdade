@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+
+<h1>Historiador online</h1>
+
+<input id="ano" type="text" placeholder="Ano">
+
+<br><br><br>
+
+<button onclick="visualizar_fato()">Ver fato</button>
+
+<br><br><br>
+
+<div id="resultado"></div>
+
+<br><br>
+
+<div id="resultado_1969"></div>
+
+
+</center>
+</body>
+</html>
+
+<script>
+
+function visualizar_fato() {
+
+    var valor_ano = Number (ano.value);
+
+    if (valor_ano <1965 ) {
+        resultado.innerHTML = `No ano ${valor_ano} o e-mail nem havia sido criado ainda...`;
+    }
+
+    if (valor_ano == 1965) {
+        resultado.innerHTML = `No ano ${valor_ano} o e-mail estava sendo criado...`
+    }
+
+    if (valor_ano > 1965) {
+        resultado.innerHTML = `No ano ${valor_ano} o e-mail já havia sido criado...`
+    }
+
+    if (valor_ano > 1969) {
+        resultado_1969.innerHTML = `No ano ${valor_ano} o e-mail já havia sido aprimorado  - Poderia ser enviado para outro computador...`;
+    }
+
+valor_ano = 0;
+}
+
+
+</script>

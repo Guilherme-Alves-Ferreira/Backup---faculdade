@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Escola 123</h1>
+        <br>
+        <input placeholder="Quals sua Renda individual?" id="RI">
+        <br><br>
+        <input placeholder="Qual sua Renda familiar?" id="RF">
+        <br><br><br>
+        <button onclick="analisar()">Analisar auxilio</button>
+        <br><br><br>
+            <div id="div_resultado"></div>
+    </center>
+</body>
+
+</html>
+<script>
+    function analisar() {
+        var Renda_individual = Number(RI.value);
+        var Renda_familiar = Number(RF.value);
+
+        var consegue_ri_rf = Renda_individual <= 1200 && Renda_familiar <= 2500;
+        var nao_consegue_ri = Renda_individual > 1200
+        var nao_consegue_rf = Renda_familiar > 2500;
+
+        var resultado = "";
+
+        if (consegue_ri_rf) {
+            resultado = '<b>Você terá direito ao auxílio!</b> <br>';
+        } else {
+            resultado = 'Você não terá direito por: <br>';
+            if (nao_consegue_ri) {
+                resultado += '<b>Sua renda individual te impede de receber o auxílio!</b> <br> ';
+            }
+            if (nao_consegue_rf) {
+                resultado += '<b>Sua renda familiar te impede de receber o auxílio!</b> <br>';
+            }
+        }
+
+        div_resultado.innerHTML = resultado;
+
+    }
+</script>

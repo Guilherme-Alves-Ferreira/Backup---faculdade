@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Dados</h1>
+
+        <br>
+
+        <button onclick="jogar()">Jogar dados</button>
+
+        <br><br>
+
+        <img src="" id="imagem" style="height: 300px;">
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function jogar() {
+
+        var valor = parseInt (Math.random() * 6) + 1;
+
+        if (valor == 1) {
+            imagem.src = 'dado1.jpg'
+        }else if (valor == 2) {
+            imagem.src = 'dado2.jpg'
+        }else if (valor == 3) {
+            imagem.src = 'dado3.jpg'
+        }else if (valor == 4) {
+            imagem.src = 'dado4.jpg'
+        }else if (valor == 5) {
+            imagem.src = 'dado5.jpg'
+        }else if (valor == 6) {
+            imagem.src = 'dado6.jpg'
+        }
+    }
+</script>

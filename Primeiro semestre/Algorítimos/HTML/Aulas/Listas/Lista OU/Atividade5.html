@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Tinder 2.0</h1>
+
+        <br>
+
+        <select id="cabelo">
+            <option value="- Selecione uma cor de cabelo -">- Selecione uma cor de cabelo -</option>
+            <option value="P">Preto</option>
+            <option value="V">Vermelho</option>
+            <option value="A">Amarelo</option>
+            <option value="C">Castanho</option>
+        </select>
+
+        <br><br>
+
+        <input type="text" placeholder="Digite sua altura" id="input_altura">
+
+        <br><br>
+
+        <button onclick="Analisar()">Deu match?</button>
+
+        <br><br>
+
+        <img src="" id="imagem">
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function Analisar() {
+
+        var cor_cabelo = (cabelo.value);
+
+        var altura = (input_altura.value);
+
+        if ( cor_cabelo == "P" || cor_cabelo == "V" && altura >=1.7 ) {
+            imagem.src = "Feliz.jpg";
+        }else {
+            imagem.src = "nao.jpg";
+        }
+    }
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Analisador de frequência</h1>
+<br><br>
+        <input id="input_frequencia" type="text" placeholder="Frequência do aluno">
+<br><br>
+        
+        <button onclick="analisar()">Analisar frequência</button>
+
+<br><br>
+
+        <img id="fotinho" src="" style="height: 300px;">
+
+    </center>
+</body>
+</html>
+
+<script>
+
+function analisar() {
+
+    var frequencia = Number (input_frequencia.value);
+
+    if (frequencia <50 ) {
+        fotinho.src = "turista.jpg"
+    }
+    else {
+        fotinho.src = "estud.jfif"
+    }
+}
+</script>

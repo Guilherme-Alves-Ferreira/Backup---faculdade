@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+
+<h1>Analisador de temperatura</h1>
+    
+<input id="temperatura" type="text" placeholder="Temperatura atual">
+
+<br><br><br>
+
+<button onclick="Analisar()">Analisar temperatura</button>
+
+<br><br>
+
+<div id="div_resultado"></div>
+
+</center>
+</body>
+</html>
+
+<script>
+
+function Analisar() {
+    
+    var valor_temperatura = Number (temperatura.value);
+
+    div_resultado.innerHTML = 'Temperatura confortável';
+
+    if (valor_temperatura <22 ) {
+        div_resultado.innerHTML = 'Temperatura desconfortável - Está frio!'
+    }
+
+    if (valor_temperatura >23 ) {
+        div_resultado.innerHTML = 'Temperatura desconfortável - Está calor!'
+    }
+
+}
+
+
+
+</script>

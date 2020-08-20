@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Coments da quarentena</h1>
+        <br><br>
+        <h3>Quantas frases você quer ver?</h3>
+        <input id="qtd_repeticoes" type="text">
+        <br><br>
+        <button onclick="dizer()">Diga algo sobre a quarentena</button>
+        <br><br>
+        <div id="frases"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function dizer() {
+
+        frases.innerHTML = ''
+
+        var repeticoes = Number (qtd_repeticoes.value)
+
+        for (var contador = 0; contador < repeticoes; contador++) {
+            frases.innerHTML += `Será que ainda existe vida lá fora? <br>`
+        }
+    }
+</script>

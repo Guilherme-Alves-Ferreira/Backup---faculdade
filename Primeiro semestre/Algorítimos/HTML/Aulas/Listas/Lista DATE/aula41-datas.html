@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 40 - textos</title>
+</head>
+<body>
+    <h3>Operações com textos</h3>
+
+    <button onclick="data_agora()">
+        Data "agora"
+    </button>
+    <button onclick="timestamp_agora()">
+        TimeStamp "agora"
+    </button>
+    <button onclick="data_zero()">
+        Ver a "Data Zero"
+    </button>
+    <br><br>
+    
+    <input placeholder="Digite uma data mm/dd/aaaa" id="data_qualquer">
+    <button onclick="analisar_data()">
+    Analisar essa Data</button>
+    <br>
+
+    <div id="div_datas"></div>
+
+</body>
+</html>
+<script>
+    function data_agora() {
+        // new Date() retorna a data e hora atuais do computador
+        var agora = new Date();
+        div_datas.innerHTML = agora;
+    }
+    
+    function timestamp_agora() {
+        // .getTime() de uma data retorna seu timestamp, 
+        // ou seja, quantos milissegundos (ms) desde a "data zero"
+        var agora = new Date().getTime();
+        div_datas.innerHTML = agora;
+    }
+
+    function data_zero() {
+        // a "data zero" é 01 de janeiro de 1970, 00h00 no fuso de londres
+        // no horário de Brasília é 21h de 31/12/1969
+        var dzero = new Date(0);
+        div_datas.innerHTML = dzero;
+    }
+
+    function analisar_data() {
+        // para criar uma data a partir de um texto, usamos um new Date()
+        // passando uma data no formato mm/dd/aaaa
+        var valor_data = new Date(data_qualquer.value);
+
+        // ao "substrair" 2 datas, temos a diferença de tempo entre elas em ms (milissegundos).
+        div_datas.innerHTML = `Diferença para a "data zero": ${valor_data - new Date(0)}ms <br>`;
+        div_datas.innerHTML += `Diferença para a "agora": ${Math.abs(valor_data - new Date())}ms`; // Math.abs() é o módulo, ou seja um número sempre positivo
+    }
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>FilmesHD 3.0</h1>
+        <br>
+        <input id="filme_novo" type="text" placeholder="Digite seu filme aqui..."><button
+            onclick="cadastrar()">Cadastrar</button>
+        <br><br>
+        <div id="filmes_totais"></div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    let filmes = [];
+
+    let contador = 0;
+
+    function cadastrar() {
+        filmes.push(filme_novo.value);
+        filme_novo.value = '';
+
+        if (contador % 2 == 0) {
+            filmes_totais.innerHTML += `<h3 style = "color: blue; margin: 0">${filmes[contador++]}</h3>`;
+        } else {
+            filmes_totais.innerHTML += `<h3 style = "color: red; margin: 0">${filmes[contador++]}</h3>`;
+        }
+    }
+</script>

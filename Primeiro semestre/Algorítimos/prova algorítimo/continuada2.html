@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pedra - Papel - Tesoura</h1>
+    <h2>Placar</h2>
+
+    <b id="placar_jogador1">Jogador 1: <b id="b_vitorias1">0</b></b>
+    <br>
+    <b id="placar_jogador2">Jogador 2: <b id="b_vitorias2">0</b></b>
+    
+    <br><br>
+
+    <button onclick="sortear()">Jo Ken Po!</button>
+
+    <br><br><br>
+
+    <img style="float: left;" src="" id="jogada1">
+    <img style="float: left;" src="" id="jogada2">
+
+    <br><br><br><br><br><br><br><br>
+
+    <span id="span_resultado" style="display: none;">Resultado: <b id="resultado"></b></span>
+    
+</body>
+</html>
+
+<script>
+
+    var vitorias_jogador1 = Number (b_vitorias1.innerHTML)
+
+    var vitorias_jogador2 = Number (b_vitorias2.innerHTML)
+
+    function sortear() {
+
+        resultado.innerHTML = '';
+
+        var numero_sorteio1 = parseInt (Math.random() * 3) + 1;
+
+        var numero_sorteio2 = parseInt (Math.random() * 3) + 1;
+
+        if (numero_sorteio1 == 1) {
+            jogada1.src = 'fechada.png';
+            jogada1.style.display = 'block';
+        }else if (numero_sorteio1 == 2) {
+            jogada1.src = 'aberta.png';
+            jogada1.style.display = 'block'
+        }else {
+            jogada1.src = 'tesoura.png';
+            jogada1.style.display = 'block'
+        }
+
+        if (numero_sorteio2 == 1) {
+            jogada2.src = 'fechada.png';
+            jogada2.style.display = 'block';
+        }else if (numero_sorteio2 == 2) {
+            jogada2.src = 'aberta.png';
+            jogada2.style.display = 'block'
+        }else {
+            jogada2.src = 'tesoura.png';
+            jogada2.style.display = 'block'
+        }
+
+        if (numero_sorteio1 == 1 && numero_sorteio2 == 3) {
+            resultado.innerHTML = 'Jogador 1 venceu porque Pedra quebra a Tesoura'
+            vitorias_jogador1 ++;
+            b_vitorias1.innerHTML = vitorias_jogador1;
+        } else if (numero_sorteio1 == 2 && numero_sorteio2 == 1) {
+            resultado.innerHTML = 'Jogador 1 venceu porque Papel cobre a Pedra'
+            vitorias_jogador1 ++;
+            b_vitorias1.innerHTML = vitorias_jogador1;
+        } else if (numero_sorteio1 == 3 && numero_sorteio2 == 2) {
+            resultado.innerHTML = 'Jogador 1 porque Tesoura corta o Papel'
+            vitorias_jogador1 ++;
+            b_vitorias1.innerHTML = vitorias_jogador1;
+        } else if (numero_sorteio2 == 1 && numero_sorteio1 == 3) {
+            resultado.innerHTML = 'Jogador 2 venceu porque Pedra quebra a Tesoura'
+            vitorias_jogador2 ++;
+            b_vitorias2.innerHTML = vitorias_jogador2;
+        } else if (numero_sorteio2 == 2 && numero_sorteio1 == 1) {
+            resultado.innerHTML = 'Jogador 2 venceu porque Papel cobre a Pedra'
+            vitorias_jogador2 ++;
+            b_vitorias2.innerHTML = vitorias_jogador2;
+        } else if (numero_sorteio2 == 3 && numero_sorteio1 == 2) {
+            resultado.innerHTML = 'Jogador 2 venceu porque Tesoura corta o Papel'
+            vitorias_jogador2 ++;
+            b_vitorias2.innerHTML = vitorias_jogador2;
+        } else {
+            resultado.innerHTML = 'EMPATE!'
+        }
+
+        if (vitorias_jogador1 > vitorias_jogador2) {
+            placar_jogador1.style.color = 'blue';
+            placar_jogador2.style.color = 'red';
+        } else if (vitorias_jogador1 < vitorias_jogador2) {
+            placar_jogador1.style.color = 'red';
+            placar_jogador2.style.color = 'blue';
+        } else {
+            placar_jogador1.style.color = 'black';
+            placar_jogador2.style.color = 'black';
+        }
+
+        span_resultado.style.display = 'block'
+
+    }
+</script>

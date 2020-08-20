@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Nome vazio</h1>
+        <br>
+        <b>Digite seu nome</b>
+        <input type="text" id="inpt_nome" onkeyup="digitando()">
+        <br><br>
+        <b id="Mensagem"></b>
+
+    </center>.
+
+</body>
+
+</html>
+
+<script>
+
+    function digitando() {
+
+        var nome = inpt_nome.value;
+
+        nome = nome.trimStart();
+        nome = nome.trimEnd();
+
+        if (nome.length == 0) {
+            Mensagem.innerHTML = 'Nome deve ser informado'
+        } else if (nome.indexOf('fogo') >= 0 ) {
+            Mensagem.innerHTML = 'Com fogo não se brinca'
+        } else {
+            Mensagem.innerHTML = 'Nome OK'
+        }
+    }
+</script>

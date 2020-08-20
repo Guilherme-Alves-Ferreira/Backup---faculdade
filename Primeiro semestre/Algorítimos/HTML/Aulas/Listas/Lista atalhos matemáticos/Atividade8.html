@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Divisor</h1>
+
+        <br>
+
+        <input id="input_valor" type="text" placeholder="Digite aqui um valor" style="text-align: center;">
+
+        <br><br>
+
+        <button onclick="verificar()">É divisível por 7?</button>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+
+        var valor = Number (input_valor.value);
+
+        if (valor % 7 == 0) {
+            alert ('Sim, é')
+        }else {
+            alert ('Não, não é')
+        }
+    }
+</script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Comparação de times</h1>
+        <br>
+        <input placeholder="Nome" type="text" id="inpt_Nome_time1">
+        <input placeholder="Vitórias" type="text" id="inpt_V_time1">
+        <input placeholder="Empates" type="text" id="inpt_E_time1">
+        <input placeholder="Derrotas" type="text" id="inpt_D_time1">
+        <br><br>
+        <input placeholder="Nome" type="text" id="inpt_Nome_time2">
+        <input placeholder="Vitórias" type="text" id="inpt_V_time2">
+        <input placeholder="Empates" type="text" id="inpt_E_time2">
+        <input placeholder="Derrotas" type="text" id="inpt_D_time2">
+        <br><br>
+        <button onclick="analisar()">Comparar campanhas</button>
+        <br><br>
+        <span id="b_pontos1"></span>
+        <span id="b_pontos2"></span>
+    </center>
+    
+
+</body>
+</html>
+
+<script>
+
+    function analisar() {
+
+        b_pontos1.innerHTML = '';
+        b_pontos2.innerHTML = '';
+
+        let time1 = {
+            Nome: inpt_Nome_time1.value,
+            V_time: Number(inpt_V_time1.value) * 3,
+            D_time: Number(inpt_D_time1.value),
+            E_time: Number(inpt_E_time1.value),
+        }
+        
+        let time2 = {
+            Nome: inpt_Nome_time2.value,
+            V_time: Number(inpt_V_time2.value) * 3,
+            D_time: Number(inpt_D_time2.value),
+            E_time: Number(inpt_E_time2.value),
+        }
+
+        let pontos_totais1 = time1.V_time + time1.E_time; 
+        let pontos_totais2 = time2.V_time + time2.E_time; 
+
+        b_pontos1.innerHTML = `O time <b>${time1.Nome}</b> terminou o campeonato com <b>${pontos_totais1}</b> pontos <br>`;
+        b_pontos2.innerHTML = `O time <b>${time2.Nome}</b> terminou o campeonato com <b>${pontos_totais2}</b> pontos`;
+
+
+    }
+
+
+</script>

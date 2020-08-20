@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto; 
+    padding: 0 30px;
+}
+
+#showcase {
+    height: 300px;
+}
+
+#content {
+    position: relative;
+    animation-name: content;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content {
+    0%   {left: -1900px}
+    100% {left: -65px}
+}
+
+#content2 {
+    position: relative;
+    animation-name: content2;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content2 {
+    0%   {right: -2000px}
+    100% {right: 90px}
+}

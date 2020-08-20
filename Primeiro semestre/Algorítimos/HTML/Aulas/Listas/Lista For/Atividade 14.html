@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Campo minado da hora!</h1>
+        <br><br>
+        <button onclick="aparecer()">Novo Jogo</button>
+        <br><br>
+        <span>Minas: <b id="b_minas"></b></span> <br>
+        <span>Explosões: <b id="b_explosoes"></b></span> <br>
+        <span>Pontos: <b id="b_pontos"></b></span>
+        <br><br>
+
+        <div id="div_jogo" style="display: none; width: 25%;">
+        </div>
+
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+
+    var pontos = 0;
+    var explosoes = 0;
+    var sorteio = 0;
+    var minas = 0;
+    var blocos_vazios = 0;
+
+    function aparecer() {
+
+        div_jogo.innerHTML = '';
+
+        div_jogo.style.display = 'block';
+        b_explosoes.innerHTML = explosoes;
+        b_pontos.innerHTML = pontos;
+
+        for (var contador_blocos = 0; contador_blocos < 12; contador_blocos++) {
+            sorteio = parseInt(Math.random() * 2) + 1;
+
+            if (sorteio == 1) {
+                if (minas < 5) {
+                    div_jogo.innerHTML += `<img onclick="this.src='mina.jpg'; placar_minas()" src="interrogacao.jpg" style="height: 100px; margin: 5px;">`;
+                    minas++;
+                    b_minas.innerHTML = minas;
+                } else {
+                    if (blocos_vazios < 7) {
+                        div_jogo.innerHTML += `<img onclick="this.src='quadrado.png'; placar_pontos()" src="interrogacao.jpg" style="height: 100px; margin: 5px;">`;
+                        blocos_vazios++;
+                    }
+                }
+            } else {
+                if (blocos_vazios < 7) {
+                    div_jogo.innerHTML += `<img onclick="this.src='quadrado.png'; placar_pontos()" src="interrogacao.jpg" style="height: 100px; margin: 5px;">`;
+                    blocos_vazios++;
+                } else {
+                    div_jogo.innerHTML += `<img onclick="this.src='mina.jpg'; placar_minas()" src="interrogacao.jpg" style="height: 100px; margin: 5px;">`;
+                    minas++;
+                    b_minas.innerHTML = minas;
+                }
+            }
+        }
+    }
+
+    function placar_minas() {
+        b_explosoes.innerHTML = ++explosoes;
+    }
+
+    function placar_pontos() {
+        b_pontos.innerHTML = pontos += 100;
+    }
+
+
+
+</script>

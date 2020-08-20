@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Banco bandtec 2.0</h1>
+        <br>
+        <h3>Informe quantos depósitos foram feitos</h3>
+        <input id="input_depositos" type="text">
+        <br><br>
+        <h3>Informe o valor dos depósitos</h3>
+        <input id="input_valor_depositos" type="text">
+        <br><br>
+        <button onclick="exibir()">Acompanhar grana</button>
+        <br><br>
+        <div id="resultado"></div>
+        <div id="valor_guardado"></div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    function exibir() {
+
+        resultado.innerHTML = '';
+
+        var qtd_depositos = Number(input_depositos.value);
+        var valor = Number(input_valor_depositos.value);
+        var total_guardado = 0;
+
+        for (var contador = 1; contador <= qtd_depositos; contador++) {
+            if (contador % 3 == 0) {
+                total_guardado += valor;
+                total_guardado = total_guardado * 1.01;
+                resultado.innerHTML += `${contador}° Mês: R$ ${total_guardado.toFixed(2)} <br>`
+            } else {
+                total_guardado += valor;
+                resultado.innerHTML += `${contador}° Mês: R$ ${total_guardado.toFixed(2)} <br>`
+            }
+        }
+        
+        valor_guardado.innerHTML = `Total guardado: R$ ${total_guardado.toFixed(2)}`;
+    }
+</script>

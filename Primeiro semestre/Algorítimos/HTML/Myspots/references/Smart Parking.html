@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smart Parking</title>
+</head>
+<body style="background-color:darkgray;">
+<img onclick="Tela_inicial()" style="width: 50px;" src="P.png" alt="">
+
+<div style="background-color: gray; height: 3px; width: 100%;"></div>  
+<div style="height: 2px; width: 100%;"></div>
+<div style="background-color: gray; height: 3px; width: 100%;"></div><br><br><br>
+
+<div style="text-align: center;">
+<img onclick="Tela_inicial()" style="width: 100px;" src="P.png" alt="">
+<b><h1>Smart Parking</h1></b> 
+</div>
+
+
+<div id="Div_Login" style="text-align: center;">
+<br><br>
+<b id="login_e">Login:</b> <input id="login" style="text-align: center" type="number" placeholder="Digite seu CPF">
+<br><br>
+ <b id="senha_e">Senha:</b> <input id="senha" style="text-align: center" type="password" placeholder="Digite sua senha"> <br><br>
+
+ <button onclick="Fazer_login()">Login</button>
+ <button onclick="butt_cadastro()"> Cadastrar-se</button> <br><br>
+ <button onclick="Mudar_senha()">Esqueci minha senha</button><br>
+</div>
+
+
+<div id="inputs_cadastro" style="text-align: center; display: none;">
+<h2 style="text-align: center;">Insira seus dados nos campos abaixo:</h2>
+<input style="text-align: center;" type="text" placeholder="Nome completo"><b style="color: red">*</b><br><br>
+<input style="text-align: center;" type="date" placeholder="Nome completo"><b style="color: red">*</b><br><br>
+<input style="text-align: center;" type="number" placeholder="Digite seu CPF"><b style="color: red">*</b><br><br>
+<input style="text-align: center;" type="number" placeholder="Digiteo número CNH"><b style="color: red">*</b><br><br>
+<input style="text-align: center;" type="text" placeholder="Endereço de E-Mail"><b style="color: red">*</b><br><br>
+<input style="text-align: center;" type="" placeholder="55+ (11)..."><b style="color: red">*</b><br><br>
+<input style="text-align: center;" type="password" placeholder="Digite sua senha"><b style="color: red">*</b><br><br>
+<input style="text-align: center;" type="password" placeholder="Confirme sua senha"><b style="color: red">*</b><br><br>
+<h4><b style="color: red">*</b> Significa que o preenchimento do campo é obrigatório</h4>
+<button onclick="button_pag2()">Próximo</button>
+</div>
+
+<div id="div_def" style="text-align: center; display: none">
+ 
+<h3>Possui alguma deficiência?</h3>
+SIM <input onclick="sim_def()" name="rdbGender" id="rdbGender" style="text-align: center;" type="radio">
+NÃO <input onclick="nao_def()" name="rdbGender" id="rdbGender" style="text-align: center;" type="radio"><br><br>
+    <div id="Input_Def" style="text-align: center; display: none">
+          <input style="text-align: center" type="text" placeholder="Tipo de deficiência"><b style="color: red">*</b><br><br>
+          <input style="text-align: center" type="text" placeholder="Número do INSS"><b style="color: red">*</b><br><br>
+          <h4><b style="color: red">*</b>Significa que o preenchimento do campo é obrigatório</h4>
+    </div>
+<button onclick="Cadastro_realizado()">Cadastrar</button><br><br>
+<button onclick="Voltar_para_começo()">Cancelar cadastro</button>
+</div>
+
+
+<div id="Cadastro_feito" style="display: none; text-align: center;">
+<h1 style="text-align: center; color: green;">Parabéns! Seu cadastro foi realizado com sucesso!!</h1>
+<button onclick="HOME()">Retornar à página principal</button>
+</div>
+
+<div id="Alterar_senha" style="display: none; text-align: center;">
+<h3>Enviaremos um Email para você poder redefinir sua senha</h3><br>
+Digite seu E-mail: <input style="text-align: center;" type="text" placeholder="Endereço de E-Mail"><br><br>
+<button onclick="Enviar_email()">Enviar</button>
+</div>
+
+<div id="Email_Enviado" style="display: none; text-align: center;">
+<h1 style="color: green; text-align: center;">Email enviado com sucesso!! Verifique sua caixa de entrada!</h1>
+<button onclick="HOME()">Retornar à página principal</button>
+</div>
+
+<div id="Boas_vindas" style="display: none; text-align: center;">
+    <b><h1>Olá!</h1></b>
+    <h2>Carregando seu perfil...</h2>
+
+</div>
+</body>
+</html>
+
+<script>
+
+function butt_cadastro() {
+     inputs_cadastro.style.display = 'block'
+     Div_Login.style.display = 'none'
+}
+
+function Voltar_para_começo() {
+    inputs_cadastro.style.display = 'none'
+    div_def.style.display = 'none'
+    Div_Login.style.display = 'block'
+}
+
+function Cadastro_realizado() {
+    inputs_cadastro.style.display = 'none'
+    Div_Login.style.display = 'none'
+    div_def.style.display = 'none'
+    Cadastro_feito.style.display = 'block'
+}
+
+function HOME() {
+    Div_Login.style.display = 'block'
+    Email_Enviado.style.display = 'none'
+    Alterar_senha.style.display = 'none'
+    Cadastro_feito.style.display = 'none'
+    div_def.style.display = 'none'
+}
+
+function Mudar_senha() {
+    inputs_cadastro.style.display = 'none'
+    Div_Login.style.display = 'none'
+    Alterar_senha.style.display = 'block'
+}
+
+function Enviar_email() {
+    Alterar_senha.style.display = 'none'
+    Email_Enviado.style.display = 'block'
+}
+
+function Fazer_login() {
+    Div_Login.style.display = 'none'
+    Boas_vindas.style.display = 'block'
+}
+
+function Tela_inicial() {
+    Div_Login.style.display = 'block'
+    Boas_vindas.style.display = 'none'
+    Alterar_senha.style.display = 'none'
+    Email_Enviado.style.display = 'none'
+    inputs_cadastro.style.display = 'none'
+    Cadastro_feito.style.display = 'none'
+}
+
+function button_pag2() {
+    inputs_cadastro.style.display = 'none'
+    div_def.style.display = 'block'
+
+}
+
+function sim_def() {
+    Input_Def.style.display = 'block'
+}
+
+function nao_def() {
+    Input_Def.style.display = 'none'
+}
+</script>

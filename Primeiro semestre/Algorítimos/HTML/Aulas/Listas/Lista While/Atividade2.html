@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Comentários</h1>
+
+        <button onclick="dizer()">Diga algo sobre a quarentena</button>
+
+        <br><br>
+
+        <span id="comentarios"></span>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function dizer() {
+
+        comentarios.innerHTML = '';
+
+        var qtd_comentarios = 1;
+
+
+        while (qtd_comentarios <=7) {
+            comentarios.innerHTML += `${qtd_comentarios}.Não ta fácil pra ninguém! <br>`;
+            qtd_comentarios++;
+        }
+    }
+</script>

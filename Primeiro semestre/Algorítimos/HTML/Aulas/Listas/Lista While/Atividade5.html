@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Sorteador</h1>
+
+        <br>
+
+        <input type="text" placeholder="Quantos números você quer sortear?" id="numeros_desejados">
+
+        <br><br>
+
+        <button onclick="sortear()">Sortear números</button>
+
+        <h2 id="mensagem"></h2>
+
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function sortear() {
+
+        var vezes_sorteado = 0;
+
+        var qtd_desejada = Number (numeros_desejados.value);
+
+        var numero_sorteado = 0;
+
+        mensagem.innerHTML = '';
+
+        while (vezes_sorteado < qtd_desejada) {
+           numero_sorteado = parseInt ((Math.random() * 102) -1);
+           if (numero_sorteado <0) {
+               numero_sorteado = 0
+               mensagem.innerHTML += `${numero_sorteado} <br>`;
+           }else {
+               mensagem.innerHTML += `${numero_sorteado} <br>`;
+           }
+           vezes_sorteado++;
+        }
+    }
+</script>

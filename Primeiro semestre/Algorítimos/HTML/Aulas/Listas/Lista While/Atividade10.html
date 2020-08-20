@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Musculação</h1>
+
+        <br>
+
+        <input id="input_frequencia" type="text" placeholder="frequencia de treino (dias)">
+
+        <br><br>
+
+        <button onclick="exibir()">Exibir rotina mensal</button>
+
+        <div id="rotina"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function exibir() {
+
+        var frequencia = Number (input_frequencia.value);
+
+        var contador = 1;
+
+        var padrao = frequencia + contador;
+
+        rotina.innerHTML = '';
+
+        while (contador <=30) {
+            if (contador == 1) {
+                rotina.innerHTML += `Dia ${contador} - <b>Musculação</b> <br><br>`;
+            }
+            else if (contador == padrao) {
+                rotina.innerHTML += `Dia ${contador} - <b>Musculação</b> <br><br>`;
+                padrao = frequencia + contador;
+            }else {
+                rotina.innerHTML += `Dia ${contador} - Comer, dormir etc <br><br>`;
+            }
+            contador ++;
+        }
+
+    }
+</script>

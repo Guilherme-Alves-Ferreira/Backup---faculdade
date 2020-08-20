@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Datas de nascimento</h1>
+        <br>
+        <b>Insira sua data de nascimento (mm/dd/aaaa)</b>
+        <input type="text" id="inpt_data">
+        <br><br>
+        <button onclick="verificar()">Ver idade atual</button>
+        <br><br>
+        <b id="resultado"></b>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+    function verificar() {
+        
+        let data_inpt = inpt_data.value;
+        let data_nasc = new Date(data_inpt);
+        let data_atual = new Date();
+        let diferenca = data_atual - data_nasc
+
+        resultado.innerHTML = `Você possui ${parseInt(diferenca / 1000 / 60 / 60 / 24 / 365)} anos 
+        ${parseInt(diferenca / 1000 / 60 / 60 / 24 / 30)} meses
+        e ${parseInt(diferenca / 1000 / 60 / 60 / 24)} dias`
+
+    }
+</script>

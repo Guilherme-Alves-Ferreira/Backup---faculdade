@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySpot/Cadastro</title>
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+     .header {
+    padding: 10px 16px;
+    background:rgba(144, 112, 112, 0);
+    color: #f1f1f1;
+    }
+ </style>
+</head>
+
+<body style=" background-image: url(fundo_paisagem1.jpg);">
+    <style>
+        body {
+            background-attachment: fixed;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: black;
+     }
+    </style>
+
+<div class="header" id="menu" style="height: 135px; ">    
+    <div style="float: left; width: 100px; height: 1px;"></div><div style="text-align: left;">
+        <a href="index.html">
+            <img style="width: 100px; float: left;" src="ícone.png"></div><br><br> <div style="float: left; width: 80px; height: 1px;">
+        </a>
+    </div>
+    
+    <div style="color: white; float: left; width: 220px; height: 1px;">
+        <a href="index.html">
+            <img id="home_img" onmouseout="normal_home()" onmouseover="cresce_home()" style="height: 50px;" src="Home.png">
+        </a>
+    </div>
+    
+    <div style="color: white; float: left; width: 220px; height: 1px;">
+        <a href="SERVICES.html">
+            <img id="services_img" onmouseout="normal_services()" onmouseover="cresce_services()" style="height: 50px;" src="Services.png">
+        </a>
+    </div>
+    
+    <div style="color: white; float: left; width: 240px; height: 1px;"> 
+        <a href="Calc.html">
+            <img id="product_img" onmouseout="normal_products()" onmouseover="cresce_products()" style="height: 53px;" src="Calculator.png">
+        </a>
+    </div>
+    <div style="float: right; width: 350px; height: 1px;">
+        <a href="TELA_CADASTRO.html">
+            <img id="img_signup" onmouseout="normal_signup()" onmouseover="cresce_signup()" style="height: 75px;" src="signup.png">
+        </a>
+    </div> 
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div id="Cadastro_feito" style="text-align: center;">
+    <h1 style="text-align: center; color:white;">Parabéns! Seu cadastro foi realizado com sucesso!!</h1><br>
+    <a href="TELA_CADASTRO.html"><button onclick="back_to_login()" style="width: 9%;">Retornar ao login</button></a>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div style="background-color:rgba(98, 99, 100, 0.897); height: 112px; text-align:right; background-attachment: fixed; ">
+    <br>
+        
+    <div style="width: 20%; height: 1px;"> 
+        <a href="https://www.instagram.com/my.spot_/?hl=pt-br">
+            <img id="img_insta" onmouseout="insta_normal()"  onmouseover="insta_grande()" src="insta.png" style="height: 60px">
+        </a> 
+    </div>  
+    
+    <div style="width: 40%; height: 1px;">
+        <a href="https://www.facebook.com/My-Spot-103935477897078/?modal=admin_todo_tour">
+            <img id="img_face" onmouseout="face_normal()" onmouseover="face_grande()" src="face.png" style="height: 62px;">
+        </a>
+    </div> 
+
+    <div style="width: 60%; height: 1px;"> 
+        <a href="https://github.com/MySpotSP">
+            <img id="img_github" onmouseout="github_normal()" onmouseover="github_grande()" src="github.png" style="height: 60px;">
+        </a>
+    </div> 
+    
+    <div style="width: 80%; height: 1px;">
+        <a href="https://twitter.com/MySpot12">
+            <img id="img_twt" onmouseout="twt_normal()" onmouseover="twt_grande()" src="twt.png" style="height: 60px;">
+        </a>
+    </div>
+
+</body>
+</html>
+
+<script language= "JavaScript" src="script_site.js"> </script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Viagens.com</h1>
+        <br>
+        <input id="lugar_novo" type="text" placeholder="Digite os lugares..."><button onclick="cadastrar()">Cadastrar local</button>
+        <br><br>
+        <input id="inpt_pesquisa" type="text" placeholder="Relembre de uma viagem..."> <button onclick="relembrar()">Relembrar viagem</button>
+        <br><br>
+        <h2 id="resultado"></h2>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    let lugares = [];
+
+    function cadastrar() {
+        lugares.push(lugar_novo.value);
+    }
+
+    function relembrar() {
+        resultado.innerHTML = '';
+
+        var numero_pesquisa = Number (inpt_pesquisa.value);
+
+        if (numero_pesquisa >= 1 && numero_pesquisa <= lugares.length) {
+
+            let lugar_encontrado = lugares[numero_pesquisa - 1];
+            resultado.innerHTML = lugar_encontrado;
+        } else {
+            resultado.innerHTML = `Você não fez uma ${numero_pesquisa}ª viagem!`;
+        }
+    }
+
+    lugar_novo.value = '';
+</script>

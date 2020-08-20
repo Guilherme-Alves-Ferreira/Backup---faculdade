@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Banco do usuário</h1>
+        <br>
+        <span>Saldo: R$ <b id="b_saldo">0.00</b></span>
+        <br>
+        <span>Depósitos: <b id="b_dep">0</b></span>
+        <br>
+        <span>Saques: <b id="b_saques">0</b></span>
+        <br><br>
+        <button onclick="depositar()">Depositar 100</button>
+        <button onclick="sacar()">Sacar 20</button>
+
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    let banco = {
+        saldo: 0,
+        depositos: 0,
+        saques: 0
+    }
+
+    function depositar() {
+
+        banco.saldo = banco.saldo + 100;
+        b_saldo.innerHTML = banco.saldo.toFixed(2);
+        banco.depositos++;
+        b_dep.innerHTML = banco.depositos;
+    }
+    function sacar() {
+
+        banco.saldo = banco.saldo - 20;
+        banco.saques++;
+        b_saldo.innerHTML = banco.saldo.toFixed(2);
+        b_saques.innerHTML = banco.saques;
+
+    }
+</script>

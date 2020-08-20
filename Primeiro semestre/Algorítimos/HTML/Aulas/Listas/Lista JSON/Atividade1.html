@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Time</h1>
+        <br>
+        <h3>Time1</h3>
+        <input placeholder="Vitórias" type="text" id="inpt_V_time1">
+        <input placeholder="Empates" type="text" id="inpt_E_time1">
+        <input placeholder="Derrotas" type="text" id="inpt_D_time1">
+        <br><br>
+        <button onclick="analisar()">Analisar campanha</button>
+        <br><br>
+        <span id="b_pontos"></span>
+
+
+    </center>
+    
+
+</body>
+</html>
+
+<script>
+
+    function analisar() {
+
+        let time1 = {
+            V_time: Number(inpt_V_time1.value) * 3,
+            D_time: Number(inpt_D_time1.value),
+            E_time: Number(inpt_E_time1.value),
+        }
+
+        let pontos_totais1 = time1.V_time + time1.E_time; 
+
+        b_pontos.innerHTML = `O time terminou o campeonato com <b>${pontos_totais1}</b> pontos`;
+
+
+    }
+
+
+</script>

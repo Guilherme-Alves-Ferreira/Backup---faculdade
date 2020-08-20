@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+    
+<h1>Calculador de refri</h1>
+
+<input id="input_latinhas_por_dia" type="text" placeholder="Latinhas por dia">
+
+<br><br>
+
+<button onclick="somar()">Quantos Refris?</button>
+
+<br><br><br>
+
+<div id="resultado"></div>
+
+<div id="aviso"></div>
+
+</center>
+</body>
+</html>
+
+<script>
+
+function somar() {
+
+var latinhas = Number (input_latinhas_por_dia.value);
+
+var latinhas_ano = latinhas *365;
+
+
+resultado.innerHTML =`Você bebe ${latinhas_ano} latinhas de refri por ano,`; 
+
+
+if (latinhas_ano >= 500) {
+    aviso.innerHTML =`Cuidado com a diabetes!`; 
+}
+
+}
+
+</script>

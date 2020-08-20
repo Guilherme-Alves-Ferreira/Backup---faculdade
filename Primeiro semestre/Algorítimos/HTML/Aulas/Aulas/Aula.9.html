@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--BOTÃO EXPRESSANDO MENSAGENS NA PÁGINA-->
+
+ <div style="text-align: center"><button onclick="Aperte_em_mim()">
+    Aperte em mim
+</button></div>
+
+
+<br><br><br>
+
+
+   <div style="text-align: center"><button onclick="Falar_uma_coisa_feia()">
+    Falar uma coisa feia
+</button></div>
+
+<br><br><br>
+
+  <div style="text-align: center"><button onclick="Falar_três_verdades()">
+    Falar três verdades
+</button></div>
+
+<!--BOTÃO EXPRESSANDO MÚLTIPLAS MENSAGENS-->
+
+<br><br>
+
+<div style="text-align: center" id="div_mensagem">
+mensagem...
+</div>
+
+<!--LISTA DE COMPRAS-->
+
+<br><br><br>
+
+<div style="text-align: center">
+<b>Lista de compras</b> <br>
+<button onclick="Cenoura()">Cenoura</button>
+<button onclick="Batata()">Batata</button>
+<button onclick="Tomate()">Tomate</button>
+<div id="div_lista_compras"></div>
+</div>
+
+ <!--FINAL DO VINGARES-->
+
+<br><br><br>
+<div style="text-align: center">
+<h1>Estalar do Thanos</h1>
+<h3>Limpando conteúdo</h3>
+Vingadores: <br>
+Capitão América<br>
+<b id="b_pantera">Pantera-Negra</b><br>
+Hulk<br>
+<i id="i_aranha">Homem Aranha</i><br>
+Homem de ferro<br>
+<span id="span_estranho">Dr. Estranho</span><br>
+
+<div>Metade dos seres vivos sortudos</div>
+<div id="div_azarados">
+    Metade dos seres vivos azarados
+</div>
+</div>
+
+<br><br>
+
+<div style="text-align: center">
+<button onclick="Estalar()"> 
+    You should have gone for the head!
+</button>
+</div>
+
+
+</body>
+</html>
+
+<script>
+    function Aperte_em_mim(){
+        // alert('Voce apertou :)');
+        div_mensagem.innerHTML = 'Você apertou :)';
+    }
+
+   
+    function Falar_uma_coisa_feia(){
+        // alert('Pão');
+        div_mensagem.innerHTML = 'Pão';
+    }
+
+
+    function Falar_três_verdades(){
+       // alert('Chocotone é melhor do que panetone');
+        // alert('Sushi é melhor do que churrasco');
+        // alert('Brigadeiro é melhor do que beijinho');
+        div_mensagem.innerHTML ='<b>Chocotone</b> é melhor do que panetone <br><br> Sushi é melhor do que churrasco <br><br> O Yoshi é o irmão perdido do Caio Ribeiro <br><br> <img style="width: 200px" src="yoshi.jfif" alt="">'
+    }
+
+function Cenoura(){
+    div_lista_compras.innerHTML += '<span style="color: coral">Cenoura</span><br>';
+}
+
+function Batata(){
+    div_lista_compras.innerHTML +=  '<span style="color: yellow">Batata</span><br>';
+}
+
+function Tomate(){
+    div_lista_compras.innerHTML += '<span style="color: red">Tomate</span><br>';
+}
+
+function Estalar(){
+    b_pantera.innerHTML = '';
+    i_aranha.innerHTML = '';
+    span_estranho.innerHTML = '';
+    div_azarados.innerHTML = '';
+}
+
+    </script>
+ 

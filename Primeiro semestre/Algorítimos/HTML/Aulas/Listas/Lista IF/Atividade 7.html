@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+
+<h1>Financiamento da casa própria</h1>
+
+<br><br><br>
+
+<input id="input_renda" type="text" placeholder="Renda familiar">
+
+<br><br>
+
+<input id="input_prestação" type="text" placeholder="Valor da prestação">
+
+<br><br><br>
+
+<button onclick="caulcular_financiamento()">Verificar financiamento</button>
+
+<br><br><br>
+
+<div id="div_resultado"></div>
+
+<br><br>
+
+<div id="div_renda_complementar"></div>
+
+    
+</center>
+</body>
+</html>
+
+<script>
+
+function caulcular_financiamento() {
+    var Renda = Number (input_renda.value);
+
+    var Prestacao = Number (input_prestação.value);
+
+    var valor_financiamento = (Prestacao / Renda) *100;
+
+    div_resultado.innerHTML = "";
+
+    div_renda_complementar.innerHTML = "";
+
+    div_resultado.innerHTML = `A prestação corresponde a ${valor_financiamento.toFixed(1)}% da renda familiar`;
+
+    if (valor_financiamento >30 ) {
+        div_renda_complementar.innerHTML = `<b style="color: red">Será necessário complementar a renda familiar</b>`;
+    }
+}
+
+
+    
+</script>

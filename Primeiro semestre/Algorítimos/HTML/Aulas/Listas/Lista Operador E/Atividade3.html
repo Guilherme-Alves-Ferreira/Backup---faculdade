@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Verificador de veganos</h1>
+
+        <br>
+
+        <select id="cafe_da_manha">
+            <option value="- Escolha um café da manhã -">- Escolha um café da manhã -</option>
+            <option value="C">Ovos</option>
+            <option value="V">Leite de arroz</option>
+            <option value="C">Arroz</option>
+        </select>
+
+        <br><br>
+
+        <select id="prato_almoco">
+            <option value="- Escolha um almoço -">- Escolha um almoço -</option>
+            <option value="C">Bife</option>
+            <option value="V">Hamburguer de soja</option>
+            <option value="C">Frango grelhado</option>
+        </select>
+
+        <br><br>
+
+        <select id="prato_janta">
+            <option value="- Escolha uma janta -">- Escolha uma janta -</option>
+            <option value="V">Picanha de soja</option>
+            <option value="C">Cupim</option>
+            <option value="C">Coração</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="analisar()">Sou vegano?</button>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function analisar() {
+
+        var cafe = cafe_da_manha.value;
+
+        var almoco = prato_almoco.value;
+
+        var janta = prato_janta.value;
+
+        if (cafe == "V" && almoco == "V" && janta == "V") {
+            alert("Sim, você é vegano!")
+        }else {
+            alert("Não, você não é vegano")
+        }
+
+    }
+ 
+   
+</script>

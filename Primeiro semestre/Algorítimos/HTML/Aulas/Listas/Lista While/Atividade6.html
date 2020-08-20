@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Números pares</h1>
+
+        <br>
+
+        <button onclick="mostrar()">Eu S2 pares</button>
+
+        <br><br>
+
+        <div id="mensagem"></div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    function mostrar() {
+
+        var numero_par = 2;
+
+        mensagem.innerHTML = '';
+
+        while (numero_par <= 100) {
+            mensagem.innerHTML += `${numero_par} <br>`;
+            numero_par = numero_par += 2;
+        }
+    }
+</script>

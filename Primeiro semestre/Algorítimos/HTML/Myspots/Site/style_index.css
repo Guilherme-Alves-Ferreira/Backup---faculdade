@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container h1{
+    text-transform: uppercase;
+    display: block
+
+}
+
+.text2{
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: text 3s 1;
+}
+
+.img{
+    animation: text 3s 1;
+    position: relative;
+}
+
+@keyframes text {
+    0%{
+        color:black;
+        margin-bottom: -40px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px; 
+    }
+}
+
+.header {
+    position: relative;
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-name: head1;
+}
+
+@keyframes head1 {
+    0%   {top: -200px;}
+    100% {top: 0;}
+}
+

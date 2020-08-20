@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+
+        <h1>Banco Itado</h1>
+<br><br>
+        <input id="input_chocolates" type="text" placeholder="Chocolates comprados" style="text-align: center;">
+<br><br><br>
+         <button onclick="calcular()">Comprar</button>
+<br><br>
+         <div id="div_mensagem"></div>
+    </center>
+</body>
+</html>
+
+<script>
+
+function calcular() {
+
+    div_mensagem.innerHTML = ""
+
+    var chocolates = Number (input_chocolates.value);
+
+    if (chocolates <=12 ) {
+        var sem_desconto = chocolates * 3;
+        div_mensagem.innerHTML = `o valor da sua compra foi de ${sem_desconto.toFixed(2)}`;
+    }
+    else {
+        var com_desconto = chocolates * 2.50;
+        div_mensagem.innerHTML = `o valor da sua compra foi de ${com_desconto.toFixed(2)}`;;
+    }
+}
+</script>

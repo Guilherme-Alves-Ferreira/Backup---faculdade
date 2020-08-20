@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 42 - const</title>
+</head>
+<body>
+
+    <h1>Deixe o console aberto quando testar!</h1>
+    
+    <button onclick="mostra_autor()">Mostra autor</button>
+    
+    <button onclick="muda_autor()">Muda autor</button>
+
+    <button onclick="muda_numero()">Muda número</button>
+
+    <button onclick="muda_escopo()">Muda número num escopo menor</button>
+    
+</body>
+</html>
+<script>
+
+    // valores criados com 'const' NÃO PODEM ser alterados!
+
+    const autor = 'Zé ruela'; // constante GLOBAL (todos têm acesso mas, claro, NINGUÉM pode alterar)
+
+    function mostra_autor() {
+        alert(`O autor é ${autor}`);
+    }
+
+    function muda_autor() {
+        autor = 'Maria Bigodenha'; // dará erro (visível no console), pois "autor" é constante (ou "imutável")
+    }
+
+    function muda_numero() {
+        // a constante abaixo foi criada numa função.
+        // Logo sua vida (seu escopo) está restrita à execução da função
+        // Quando a função acabar sua executação, essa constante deixará de existir
+        const sorteado = Math.random();
+        alert(`Número sorteado: ${sorteado}`);
+
+        // porém
+        sorteado = 1234; // esta linha vai dar ERRO! Não posso reatribuir valor numa constante!
+        alert(`Número sorteado: ${sorteado}`);
+    }
+
+    function muda_escopo() {
+
+        for(let volta=1; volta<4; volta++) {
+            // a constante abaixo foi criada num 'for'.
+            // Logo sua vida (seu escopo) está restrita à execução deste 'for'
+            const agora = new Date();
+            alert(`${volta}ª volta: ${agora}`);
+
+            // a linha abaixo daria erro
+            // agora = new Date('01/01/2000');
+        }
+        alert(`E agora? ${agora}`);
+
+        /*
+        constantes criadas dentro de escopos menores 
+        (ex: for, while, if, else-if)
+
+        só vivem lá dentro.
+
+        ex: pode ter uma const num for ou while que não dá erro.
+            Pois: novo loop, vida nova!
+        */
+
+    }
+</script>

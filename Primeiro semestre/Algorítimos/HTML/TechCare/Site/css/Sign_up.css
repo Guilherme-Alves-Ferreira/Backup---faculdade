@@ -1,0 +1,78 @@
+.signup_box {
+    margin-top: 150px;
+}
+.signup_box b {
+    color: #333;
+    font-size: 270%;
+}
+
+.inputs_signup1 {
+    margin-top: 50px;
+}
+
+#first_name {
+    width: 15%;
+    height: 40px;
+    border-radius: 10px;
+    border-left: white;
+    border-top: white;
+    text-align: center;
+    border-top: 40px;
+}
+
+#last_name {
+    width: 15%;
+    height: 40px;
+    border-radius: 10px;
+    border-left: white;
+    border-top: white;
+    text-align: center;
+}
+
+#cpf {
+    width: 15%;
+    height: 40px;
+    border-radius: 10px;
+    border-left: white;
+    border-top: white;
+    text-align: center;
+}
+
+#numero_cellphone {
+    width: 15%;
+    height: 40px;
+    border-radius: 10px;
+    border-left: white;
+    border-top: white;
+    text-align: center;
+}
+
+#email {
+    width: 15%;
+    height: 40px;
+    border-radius: 10px;
+    border-left: white;
+    border-top: white;
+    text-align: center;
+}
+
+.senha {
+    width: 15%;
+    height: 40px;
+    border-radius: 10px;
+    border-left: white;
+    border-top: white;
+    text-align: center;
+}
+
+.inputs_box button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #1d649e;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+

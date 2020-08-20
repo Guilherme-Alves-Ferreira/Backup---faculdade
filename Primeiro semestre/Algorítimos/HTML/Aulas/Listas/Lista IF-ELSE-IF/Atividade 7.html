@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Calendário</h1>
+
+        <br><br>
+
+        <select onchange="escolhendo_mes()" id="meses">
+            <option value="">- Month -</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+
+        <h2 id="resultado"></h2>
+
+        <img src="" id="imagem" style="height: 300px;">
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function escolhendo_mes() {
+
+        if (meses.value == "March" ) {
+            resultado.innerHTML = "March"
+            imagem.src = "primavera.jpg"
+        }else if (meses.value == "April" ) {
+            resultado.innerHTML = "April"
+            imagem.src = "primavera.jpg"
+        }else if (meses.value == "May" ) {
+            resultado.innerHTML = "May"
+            imagem.src = "primavera.jpg"
+        }else if (meses.value == "June" ) {
+            resultado.innerHTML = "June"
+            imagem.src = "verao.jfif"
+        }else if (meses.value == "July" ) {
+            resultado.innerHTML = "July"
+            imagem.src = "verao.jfif"
+        }else if (meses.value == "August" ) {
+            resultado.innerHTML = "August"
+            imagem.src = "verao.jfif"
+        }else if (meses.value == "September" ) {
+            resultado.innerHTML = "September"
+            imagem.src = "outono.jpg"
+        }else if (meses.value == "October" ) {
+            resultado.innerHTML = "October"
+            imagem.src = "outono.jpg"
+        }else if (meses.value == "November" ) {
+            resultado.innerHTML = "November"
+            imagem.src = "outono.jpg"
+        }else if (meses.value == "December" ) {
+            resultado.innerHTML = "December"
+            imagem.src = "inverno.jpeg"
+        }else if (meses.value == "January" ) {
+            resultado.innerHTML = "January"
+            imagem.src = "inverno.jpeg"
+        }else if (meses.value == "February" ) {
+            resultado.innerHTML = "February"
+            imagem.src = "inverno.jpeg"
+        }
+    }
+</script>

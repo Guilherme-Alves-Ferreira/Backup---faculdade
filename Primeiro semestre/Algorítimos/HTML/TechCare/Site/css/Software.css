@@ -1,0 +1,90 @@
+.inputbox input{
+    width: 35%;
+    height: 10px;
+    padding: 10px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.inputbox label{
+    position: absolute;
+    padding: 7px 0;
+    letter-spacing: 1px;
+    margin-left: -190px;
+    font-size: 18px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+#IDM_label{
+    letter-spacing: 5px;
+}
+
+#password_label{
+    letter-spacing: 5px;
+}
+
+.inputbox input:focus ~ #IDM_label,
+.inputbox input:valid ~ #IDM_label{
+    top: 415px;
+    color: #1ea6be;
+    font-size: 13px;
+}
+
+.inputbox input:focus ~ #password_label,
+.inputbox input:valid ~ #password_label{
+    top: 475px;
+    color: #1ea6be;
+    font-size: 13px;
+}
+
+#btt_login{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #1d649e;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: -130px;
+}
+
+#a_forgot_password{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Arial';
+}
+
+#a_forgot_idm{
+    margin-left: -45px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Arial';
+}
+
+.login_box {
+    background-color: rgba(51, 51, 51, 0.856);
+    width: 30%;
+    height: 400px;
+    border-radius: 15px;
+    margin-top: 250px;
+}
+
+.login_box b {
+    font-size: 270%;
+    color: #fff;
+}
+
+.title {
+    margin-bottom: 50px;
+}

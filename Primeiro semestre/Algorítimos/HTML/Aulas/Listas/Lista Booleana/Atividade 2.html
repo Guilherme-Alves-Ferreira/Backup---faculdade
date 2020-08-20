@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Login</h1>
+        <br>
+        <input id="input_login" placeholder="Login">
+        <br><br>
+        <input id="input_senha" placeholder="Senha" type="password" >
+        <br><br><br>
+        <button onclick="Entrar()">Entrar</button>
+        <br><br><br>
+            <div id="div_resultado"></div>
+    </center>
+</body>
+
+</html>
+<script>
+    function Entrar() {
+        var Login = input_login.value == 'aidimin';
+        var senha = input_senha.value == 'seinha';
+
+        var resultado = "";
+
+        if (Login && senha) {
+            resultado = '<b style="color: blue;">Usuário autenticado com sucesso!</b>';
+        } else if (!Login && !senha) {
+            resultado = '<b style="color: red;">Seu login está inválido! <br> Sua senha está inválida!</b>';
+        } else if (!Login) {
+            resultado += '<b style="color: red;">Seu login está inválido!</b>'
+        }else if (!senha) {
+            alert('Entre em contato com o suporte para recuperar sua senha')
+            resultado += '<b style="color: red;">Sua senha está inválida!</b>'
+        }
+        div_resultado.innerHTML = resultado;
+
+    }
+</script>

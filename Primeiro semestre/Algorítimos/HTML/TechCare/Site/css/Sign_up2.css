@@ -1,0 +1,22 @@
+.sign_up2_box{
+    width: 40%;
+    height: 550px;
+    border-radius: 15px;
+}
+
+.sign_up2_box select{
+    width: 13%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.sign_up2_box button{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #1d649e;
+    padding: 5px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}

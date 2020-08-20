@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background: #222; color: #f9f9f9;padding-top: 200px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    <center>
+        <h1>
+            Sorteio de cadastro
+        </h1>
+        <br>
+        <button
+            style="border: none; outline: none; padding: 20px; font-weight: 500; font-size: 120%; width: 130px; box-shadow: 0 0 30px 1px #000; border-radius: 15px; background: #296979; color: #f9f9f9 ; cursor: pointer;"
+            onclick="sortear()">Sortear</button>
+        <br><br>
+        <span id="resultado"></span>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    function sortear() {
+
+        resultado.innerHTML = '';
+
+        let numero = parseInt(Math.random() * 2 + 1);
+
+        if (numero == 1) {
+            resultado.innerHTML = `<b style="font-size: 160%">Gui</b>`;
+            let nome = 'CRIANÇA';
+            console.log(`${nome}`)
+        } else {
+            resultado.innerHTML = `<b style="font-size: 160%">Isa</b>`;
+            let nome = 'VELHA';
+            console.log(`${nome}`)
+        }
+    }
+</script>

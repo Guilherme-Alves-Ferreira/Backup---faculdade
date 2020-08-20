@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Auxiliar de cozinha</h1>
+<br><br>
+        <input id="input_cozimento" type="text" placeholder="Tempo de cozimento">
+<br><br>
+        
+        <button onclick="provar()">Provar arroz</button>
+
+<br><br>
+
+        <img id="arroz_img" src="" style="height: 300px;">
+
+    </center>
+</body>
+</html>
+
+<script>
+
+function provar() {
+
+    var cozimento = Number (input_cozimento.value);
+
+    if (cozimento == 5 ) {
+        arroz_img.src = "arroz_bom.jpg"
+    }
+    else {
+        arroz_img.src = "arroz_bom.jpg"
+    }
+}
+</script>

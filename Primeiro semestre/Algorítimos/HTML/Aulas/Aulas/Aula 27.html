@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Avaliador Bandtec</h1>
+
+        <br>
+
+        <input type="text" placeholder=" Nota ENEM " id="enem">
+
+        <br>
+
+        <input type="text" placeholder=" Nota do vestibular " id="vestibular">
+
+        <br><br>
+
+        <button onclick="avaliar()">E agora?</button>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function avaliar() {
+        
+        var nota_enem = Number (enem.value);
+        var nota_vestibular = Number (vestibular.value);
+
+// Basta que apenas um dos testes seja verdade para que tudo seja verdade
+// Operador "OU" (||)
+
+        if (nota_enem >=450 || nota_vestibular >=450) {
+            alert("Você participará da dinâmica de grupos")
+        }else {
+            alert("Tente outra vez")
+        }
+    }
+</script>

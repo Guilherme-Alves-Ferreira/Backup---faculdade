@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Mãe Diná</h1>
+        <br>
+        <input type="text" id="inpt_numero">
+        <br><br>
+        <button onclick="sortear()">Testar minha sorte</button>
+        <br><br>
+        <div id="div_resultado"></div>
+    </center>
+</body>
+
+</html>
+<script>
+
+    function sortear() {
+
+        var numb_sorte = Number(inpt_numero.value);
+
+        for (var contador = 1; contador <= 20; contador++) {
+            var numb_sorteado = parseInt(Math.random() * 101);
+
+            if (numb_sorteado == numb_sorte) {
+                break;
+            }
+        }
+
+        if (contador <= 20) {
+            div_resultado.innerHTML = `Muito bem, você é uma pessoa de sorte! Seu número saiu no ${contador}º sorteio`;
+        } else {
+            div_resultado.innerHTML = "É, você não tem muita sorte em sorteios, pelo visto";
+        }
+    }
+
+</script>

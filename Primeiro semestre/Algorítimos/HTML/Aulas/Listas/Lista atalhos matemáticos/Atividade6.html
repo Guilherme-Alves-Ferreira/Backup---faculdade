@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Sorteador de time</h1>
+        
+        <br>
+
+        <button onclick="sortear()">Sortear time</button>
+
+        <br><br>
+
+        <img src="" id="imagem" style="height: 150px;">
+    </center>
+</body>
+</html>
+
+<script>
+
+
+    function sortear() {
+
+        var time = parseInt (Math.random() * 4) + 1;
+
+        if (time == 1) {
+            imagem.src = 'cor.jpg';
+        }else if (time == 2) {
+            imagem.src = 'sp.png';
+        }else if(time == 3) {
+            imagem.src = 'palmeiras.jpg';
+        }else {
+            imagem.src = 'sant.png'
+        }
+        
+    }
+</script>

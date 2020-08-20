@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySpot/Serviços</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style_services.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .header {
+        padding: 10px 16px;
+        background:rgba(144, 112, 112, 0);
+        color: #f1f1f1;
+        }
+        .content {
+        padding: 16px;
+        }
+        .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+        }
+        .sticky + .content {
+        padding-top: 102px;
+        }
+    </style>
+    
+</head>
+    
+<body style=" background-image: url(fundo_paisagem1.jpg);">
+        <style>
+            body {
+                background-attachment: fixed;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-color: black;
+         }
+        </style>
+    
+    <div class="header" id="menu" style="height: 135px; ">    
+        <div style="float: left; width: 100px; height: 1px;"></div><div style="text-align: left;">
+            <a href="index.html">
+                <img style="width: 100px; float: left;" src="ícone.png"></div><br><br> <div style="float: left; width: 80px; height: 1px;">
+            </a>
+        </div>
+        
+        <div style="color: white; float: left; width: 220px; height: 1px;">
+            <a href="index.html">
+                <img id="home_img" onmouseout="normal_home()" onmouseover="cresce_home()" style="height: 50px;" src="Home.png">
+            </a>
+        </div>
+        
+        <div style="color: white; float: left; width: 220px; height: 1px;">
+            <a href="SERVICES.html">
+                <img id="services_img" onmouseout="normal_services()" onmouseover="cresce_services()" style="height: 50px;" src="Services.png">
+            </a>
+        </div>
+        
+        <div style="color: white; float: left; width: 240px; height: 1px;"> 
+            <a href="Calc.html">
+                <img id="product_img" onmouseout="normal_products()" onmouseover="cresce_products()" style="height: 53px;" src="Calculator.png">
+            </a>
+        </div>
+        <div style="float: right; width: 350px; height: 1px;">
+            <a href="TELA_CADASTRO.html">
+                <img id="img_signup"onmouseout="normal_signup()" onmouseover="cresce_signup()" style="height: 75px;" src="signup.png">
+            </a>
+        </div> 
+    
+    </div>
+
+<br><br><br><br><br><br><br><br>
+
+<div id="div_servicos" >
+
+    <div id="content" class="container" style="background-color: rgba(0, 0, 0, 0.664); width: 100%; height: 750px; border-radius: 20px;">
+        <br><br>
+                    <span style="color: white; font-family: Georgia; font-size: 150%;">     
+                    <p style="font-size:60px">My Spot <b style="color: royalblue">ROYAL</b></p> 
+        <br>
+                        Este é um serviço direcionado para os estacionamentos privados, ou seja
+                        para shoppings, estádios, clubes, aeroportos, etc... <br><br><br>
+                        
+                        O My Spot <b style="color: royalblue;">Royal</b> fornecerá aos clientes da empresa contratante 
+                        a possibilidade de reservar uma vaga no seu estacionamento
+                        de forma que ele receba um QR Code por SMS ou E-Mail e ao apresentar o mesmo para um leitor,
+                        sua entrada será liberada e o sensor de proximidade avisará aos gerenciadores do local que 
+                        aquela determinada vaga foi ocupada. Além de dados que podem ser acessados pelos usuários,
+                        indicando os horários de menor movimento, vagas que são menos e mais ocupadas e quanto tempo as pessoas
+                        costumam ficar em seus estabelecimentos. <br>
+
+                        A empresa também terá acesso à todos os dados e gráficos de lotação que serão gerados pelo 
+                        sistema por meio dos sensores ao decorrer do tempo.
+                    </span>
+            </div>
+            
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div id="content2" class="container" style="background-color: rgba(0, 0, 0, 0.664); width: 100%; height: 750px; border-radius: 20px; float: right;">
+        <br><br>
+                    <span style="color: white; font-family: Georgia; font-size: 150%;">     
+                        <p style="font-size:60px">My Spot <b style="color:coral">PUBLIC</b></p> 
+        <br>
+                        Este serviço é mais indicado para orgãos governamentais ou empresas com estacionamentos públicos,
+                        uma vez que não haverá possibilidade de reservar vagas. <br><br><br>               
+
+                        O My Spot <b style="color: coral;">Public</b> fornecerá aos clientes da empresa contratante 
+                        dados sobre o uso das vagas do estacionamento, para saber aproximadamente a lotação em um determinado 
+                        horário, quais vagas costumam ser ocupadas mais vezes e quanto tempo as pessoas costumam deixar seus 
+                        carros no estacionamento. <br>
+
+                        A empresa também terá acesso à todos os dados e gráficos de lotação que serão gerados pelo 
+                        sistema por meio dos sensores ao decorrer do tempo.
+                    </span>
+            </div>
+
+
+
+
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div style="background-color:rgba(98, 99, 100, 0.897); height: 112px; text-align:right; background-attachment: fixed; ">
+    <br>
+        
+        <div style="width: 20%; height: 1px;"> 
+            <a href="https://www.instagram.com/my.spot_/?hl=pt-br">
+                <img id="img_insta" onmouseout="insta_normal()" onmouseover="insta_grande()" src="insta.png" style="height: 60px">
+            </a> 
+        </div>  
+        
+        <div style="width: 40%; height: 1px;">
+            <a href="https://www.facebook.com/My-Spot-103935477897078/?modal=admin_todo_tour">
+                <img id="img_face" onmouseout="face_normal()" onmouseover="face_grande()" src="face.png" style="height: 62px;">
+            </a>
+        </div> 
+    
+        <div style="width: 60%; height: 1px;"> 
+            <a href="https://github.com/MySpotSP">
+                <img id="img_github" onmouseout="github_normal()" onmouseover="github_grande()" src="github.png" style="height: 60px;">
+            </a>
+        </div> 
+        
+        <div style="width: 80%; height: 1px;">
+            <a href="https://twitter.com/MySpot12">
+                <img id="img_twt" onmouseout="twt_normal()" onmouseover="twt_grande()" src="twt.png" style="height: 60px;">
+            </a>
+        </div>
+
+
+
+</div>
+</body>
+</html>
+
+<script language="JavaScript" src="script_site.js"></script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Família</h1>
+        <br>
+        <input id="inpt_cadastros" type="text" placeholder="insira aqui os nomes...">
+        <button onclick="cadastrar()">Cadastrar</button>
+        <br><br>
+        <button onclick="verificar()">Quantos são da família?</button>
+        <br><br>
+        <div id="resultado"></div>
+        <br><br>
+        <div id="div_nomes"></div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    let membros = [];
+    let familia = [];
+
+    function cadastrar() {
+        var nome = inpt_cadastros.value;
+        membros.push(nome.toLowerCase());
+    }
+
+    function verificar() {
+        for (let posicao = 0; posicao < membros.length; posicao++) {
+            if (membros[posicao].indexOf('silva') > -1) {
+                familia.push(membros[posicao]);
+            }
+        }
+
+        if (familia.length > 0) {
+            div_nomes.innerHTML = '';
+            resultado.innerHTML = `<b>Existem ${familia.length} pessoas com 'Silva' no nome</b>`;
+        
+        for (contador = 0; contador < familia.length; contador++)
+            div_nomes.innerHTML += `<b>${familia[contador]}</b> <br>`;
+
+        } else {
+            resultado.innerHTML = `Existem 0 pessoas com 'Silva' no nome`;
+        }
+    }
+</script>

@@ -1,0 +1,45 @@
+.text1{
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: text 3s 1;
+}
+
+@keyframes text {
+    0%{
+        margin-bottom: -40px;
+    }
+    30%{
+        color:white;
+        letter-spacing: 30px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px; 
+    }
+}
+
+#content {
+    position: relative;
+    animation-name: content;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content {
+    0%   {right: -1900px}
+    100% {right: 0px}
+}
+
+#content2 {
+    position: relative;
+    animation-name: content2;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content2 {
+    0%   {left: -2000px}
+    100% {left: 0px}
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Senhas...</h1>
+        <br>
+        <b>Informe sua senha</b>
+        <input type="text" id="inpt_senha" onkeyup="digitando()">
+        <br><br>
+        <span>Versão forte da senha: <b id="resultado"></b></span>
+        <br><br>
+        <b id="senha_nivel"> </b>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    function digitando() {
+
+        var frase = inpt_senha.value;
+        var A_maiusculo = frase.indexOf('A') >= 0;
+        var E_maiusculo = frase.indexOf('E') >= 0;
+        var a_minusculo = frase.indexOf('a') >= 0;
+        var e_minusculo = frase.indexOf('e') >= 0;
+
+        while (A_maiusculo || E_maiusculo || a_minusculo || e_minusculo) {
+            frase = frase.replace('a', '@');
+            frase = frase.replace('e', '3');
+            frase = frase.replace('A', '@');
+            frase = frase.replace('E', '3');
+            A_maiusculo = frase.indexOf('A') >= 0;
+            E_maiusculo = frase.indexOf('E') >= 0;
+            a_minusculo = frase.indexOf('a') >= 0;
+            e_minusculo = frase.indexOf('e') >= 0;
+
+            resultado.innerHTML = frase;
+        }
+
+        if (frase.length >= 12) {
+            senha_nivel.innerHTML = '<b style="color: green;">Força de senha: Forte</b>'
+        } else if (frase.length >= 7) {
+            senha_nivel.innerHTML = '<b style="color: rgb(155, 155, 58);">Força de senha: Médio</b>'
+        } else {
+            senha_nivel.innerHTML = '<b style="color: red;">Força de senha: Fraca</b>'
+        }
+
+    }
+</script>

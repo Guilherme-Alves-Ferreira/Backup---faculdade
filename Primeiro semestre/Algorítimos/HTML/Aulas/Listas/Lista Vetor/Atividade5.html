@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Aluno</h1>
+        <br>
+        <input id="nome_novo" type="text" placeholder="Digite seu filme aqui..."><button
+            onclick="cadastrar()">Cadastrar</button>
+        <br><br>
+        <div id="div_nomes"></div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    let nomes = [];
+
+    function cadastrar() {
+        div_nomes.innerHTML = '';
+        nomes.push(nome_novo.value);
+
+        for (let contador = nomes.length - 1; contador >= 0; contador--) {
+            div_nomes.innerHTML += `${nomes[contador]} <br>`;
+            nome_novo.value = '';
+        }
+    }
+</script>

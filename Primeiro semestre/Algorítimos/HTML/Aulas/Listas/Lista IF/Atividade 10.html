@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+
+<h1>Analisador de série</h1>
+
+<br><br><br>
+
+<input id="ultima_serie" type="text" placeholder="Última série (SITCOM) assistida">
+
+<br><br>
+
+<input id="qtd_episodios" type="text" placeholder="Quantidade de episódios assistidos">
+
+<br><br><br>
+
+<button onclick="Analisar()">Analisar nível</button>
+
+<br><br><br>
+
+<div id="div_mensagem"></div>
+
+<br><br>
+
+<div id="div_resultado"></div>
+
+</center>
+</body>
+</html>
+
+<script>
+
+function Analisar() {
+
+    var episodios = Number (qtd_episodios.value);
+
+    var tempo_gasto = episodios * 22;
+
+    div_mensagem.innerHTML = `Vejo que você gosta da série ${ultima_serie.value}`;
+
+    if (tempo_gasto >1800 ) {
+        div_resultado.innerHTML = `Uau, você realmente gosta dessa série!`
+    }
+
+
+}
+</script>

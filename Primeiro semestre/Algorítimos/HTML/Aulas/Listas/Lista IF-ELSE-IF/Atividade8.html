@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document
+    </title>
+</head>
+<body>
+    <center>
+        <h1>Contador</h1>
+    
+        <br>
+
+        <span>Você já clicou <b id="b_cliques">0</b> vezes</span>
+
+        <br><br>
+
+        <button onclick="aumentar()">Clica neu</button>
+
+        <br><br>
+
+        <div id="mensagem"></div>
+    </center>
+</body>
+</html>
+
+<script>
+
+function aumentar() {
+    
+    var cliques = Number (b_cliques.innerHTML);
+    
+    cliques ++;
+
+    b_cliques.innerHTML = cliques;
+
+    if (cliques <5 ) {
+        mensagem.innerHTML = "Dedo fraquinho, hein";
+    }else if (cliques <10 ) {
+        mensagem.innerHTML = "Dedo bom, mano";
+    }else if (cliques <15) {
+        mensagem.innerHTML = "Gosta de clicar, hein!";
+    }else {
+        mensagem.innerHTML = "Eita dedo nervoso!";
+    }
+}
+
+</script>

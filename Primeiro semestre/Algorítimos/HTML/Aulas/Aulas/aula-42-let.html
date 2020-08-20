@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 42 - let</title>
+</head>
+<body>
+    <h1>Deixe o console aberto quando testar!</h1>
+
+    <button onclick="ehnois()">É nóis no JS</button>
+    <br>
+    <button onclick="tamo_junto()">Tamo junto no JS</button>
+    <br>
+    <div id="div_resultado"></div>    
+    
+</body>
+</html>
+<script>
+    // uma variável criada com "let" fora das funções
+    // continua sendo GLOBAL
+    let cliques = 0;
+
+    function ehnois() {
+        cliques++;
+        div_resultado.innerHTML = `frase vale: ${frase}`; // vai dar erro nesta linha
+        let frase; 
+        // se fosse "var" e não "let", a linha acima não daria erro.
+        // o valor da variável seria "undefined"
+        // com let, a variável só existe mesmo após a linha da criação da variável
+        
+        // ou seja, daqui em diante, usar a "frase", daria "undefined" 
+        // ou um valor qualquer, caso tenha sido atribuído com "="
+
+    }
+
+    function tamo_junto() {
+        cliques++;
+        div_resultado.innerHTML = '';
+
+        // "let ordem" indica que "ordem" é criada no "for"
+        // e "morre", ou seja, deixa de existir quando o "for" acaba
+        for (let ordem=0; ordem<=10; ordem++) {
+            div_resultado.innerHTML += `Ordem: ${ordem} <br>`;    
+        }
+        // a linha abaixo dará erro, pois "ordem" só existe dentro do "for"
+        div_resultado.innerHTML += `<br>E a ordem?: ${ordem}`;
+
+        // variáveis criadas com "let" tem escopo bem definido.
+        // ou seja:
+        /*
+            Criadas num for, só existem dentro do for
+            Criadas num while, só existem dentro do while
+            Criadas num if, só existem dentro do if
+            Criadas num else-if, só existem dentro do else-if
+        */
+    }
+</script>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Teste "Pense Rápido"</h1>
+        <br>
+        <input onkeyup="digitando()" id="inpt_texto" placeholder="Algo com ao menos 5 letras" type="text">
+        <button onclick="comecar()">Iniciar teste</button>
+        <br><br>
+        <b id="b_mensagem"></b>
+        <span id="resultado"></span>
+        <br>
+        <b id="b_tempo"></b>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+
+    var tempo_comeco = 0;
+
+    function digitando() {
+        tempo_comeco = new Date()   ;
+    }
+
+    function comecar() {
+        b_tempo.innerHTML = '';
+        b_mensagem.innerHTML = '';
+        resultado.innerHTML = '';
+        var texto = inpt_texto.value;
+        var clicou = new Date();
+
+        texto = texto.trimStart();
+        texto = texto.trimEnd();
+
+        if (texto.length < 5) {
+            b_mensagem.innerHTML = 'Valor inválido. Digite ao menos 5 letras sem espaços em branco nas extremidades';
+        } else {
+            for (var posicao = texto.length -=1; posicao > -1; posicao--) {
+                var letra = texto[posicao];
+                resultado.innerHTML += `${letra} <br>`;
+                var tempo_corrido =  (clicou - tempo_comeco) / 1000;
+                b_tempo.innerHTML = `Você levou ${(tempo_corrido).toFixed(3)} segundos para sair da frase e clicar no botão`;
+            }
+        }
+    }
+
+
+
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>jo ken po</h1>
+
+
+        <br>
+
+        <button onclick="gerar_imagem()">Jogar</button>
+
+        <br><br>
+
+        <img src="" id="imagem" style="height: 200px;">
+
+    </center>
+</body>
+
+</html>
+
+<script>
+
+    var id_imagem = 0;
+
+    function gerar_imagem() {
+
+        id_imagem = parseInt((Math.random() * 3) + 1);
+
+        if (id_imagem == 1) {
+            imagem.src = '1.jpg';
+        } else if (id_imagem == 2) {
+            imagem.src = '2.jpg';
+        } else {
+            imagem.src = '3.jpg';
+        }
+    }
+
+</script>

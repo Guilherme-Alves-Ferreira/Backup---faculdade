@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+    <h1>Faculdade BandTec</h1>
+
+    <br><br>
+
+    <input id="nota" type="text" placeholder="Digite a nota do aluno">
+
+    <br><br>
+
+    <button onclick="classificar()">Classificar aluno</button>
+</center>
+    
+</body>
+</html>
+
+<script>
+
+function classificar() {
+     var N1 = Number (nota.value) ;
+
+     if (N1 <5 ) {
+         alert("Aluno precisa de muita ajuda");
+     }else if (N1 <= 7) {
+         alert("Aluno na média");
+     }else if (N1 <=9.5 ) {
+         alert("Aluno na acima da média");
+     }else if (N1 <=10) {
+         alert ("Aluno fora da curva");
+     }
+         
+}
+</script>

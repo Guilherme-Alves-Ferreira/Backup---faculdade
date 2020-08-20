@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Avaliador de pagamento</h1>
+
+        <br>
+
+        <select id="modo">
+            <option value="- Selecione um modo de pagamento -">- Selecione um modo de pagamento -</option>
+            <option value="1">Dinheiro</option>
+            <option value="2">Cartão de débito</option>
+            <option value="3">Cartão de crédito</option>
+            <option value="4">Boleto</option>
+
+            <br><br>
+        </select>
+
+        <br><br>
+
+        <button onclick="analisar()">Analisar compra</button>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function analisar() {
+
+        var metodo = modo.value;
+  
+        if (metodo == 1 || metodo ==2 ) {
+            alert("Você terá que pagar a vista");
+        }else if (metodo ==3 || metodo ==4 ) {
+            alert("Pagamento poderá ser parcelado");
+        }
+    }
+
+
+</script>

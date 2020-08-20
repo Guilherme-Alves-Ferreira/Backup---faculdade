@@ -1,0 +1,162 @@
+.showcase {
+    height: 1200px;
+    width: 100%;
+    background: url('https://static-dm.akamaized.net/siege/prod/r6s-bg-black.jpg');
+    text-align: center;
+    color: #ffffff;
+}
+
+.showcase h1 {
+    margin: 0;
+    margin-top: 300px;
+    font-family: monospace;
+    color: #1e58bd;
+    font-size: 400%;
+}
+
+.showcase h2 {
+    margin: 0;
+    font-family: sans-serif;
+    color: #FD6438;
+    font-size: 300%;
+}
+
+.desc {
+    margin: 150px 0px;
+}
+
+.desc P {
+    text-align: justify;
+    margin: 0;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 150%;
+}
+
+.transicao {
+    margin: 0 0;
+}
+.transicao .branca {
+    width: 100%;
+    height: 10px;
+    background: #fff;
+}
+
+.transicao .laranja {
+    width: 100%;
+    height: 25px;
+    background: #FD6438;
+}
+
+.precos {
+    background: url(../img/wallpaper_serviços.jpg);
+    width: 100%;
+    height: 1000px;
+    padding-top: 100px;
+}
+
+.precos h1 {
+    margin: 0;
+    font-family: monospace;
+}
+
+.precos .normal {
+    width: 20%;
+    height: 700px;
+    background: rgba(230, 236, 246, 0.75);
+    margin-left: 250px;
+    margin-right: 50px;
+    float: left;
+}
+
+.precos .normal img {
+    margin-top: 50px;
+    height: 100px;
+    width: 100px;
+}
+
+.precos .normal h2 {
+    color: #213456;
+}
+
+.precos .normal p {
+    color: #213456;
+}
+
+.precos .premium {
+    width: 20%;
+    height: 700px;
+    background: rgba(49, 85, 151, 0.75);
+    margin: 0 50px;
+    float: left;
+}
+
+.precos .premium img {
+    margin-top: 50px;
+    height: 100px;
+    width: 100px;
+}
+
+.precos .premium h2 {
+    color: #fff;
+}
+
+.precos .premium li {
+    color: white;
+    list-style: none;
+}
+
+.precos .premium .comprar {
+    margin-top: 200px;
+}
+
+.precos .premium .comprar button{
+    border: none;
+    height: 30px;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+
+.precos .advanced {
+    width: 20%;
+    height: 700px;
+    background: rgba(33, 52, 86, 0.75);
+    margin: 0 50px;
+    float: left;
+}
+
+.precos .advanced img {
+    margin-top: 50px;
+    height: 100px;
+    width: 100px;
+}
+
+.precos .advanced h2 {
+    color: #fff;
+}
+
+.precos .advanced li {
+    color: white;
+    list-style: none;
+}
+
+.precos .advanced .comprar {
+    margin-top: 160px;
+}
+
+.precos .advanced .comprar button{
+    border: none;
+    height: 30px;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+
+.footer {
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    margin-top: 800px;
+}

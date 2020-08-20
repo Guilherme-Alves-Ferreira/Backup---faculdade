@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/Menu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index-style.css">
+    <link rel="stylesheet" href="../CSS/Sign_in.css">
+    <link rel="icon" href="../img/favicon.ico">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1 {
+            height: 90vh;
+            width: 100%;
+            background-image: url(../img/dashboard_login_bgc.jpg);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+
+        }
+
+        h1 {
+            font-family: 'Arial';
+        }
+
+        span {
+            font-family: 'Arial';
+        }
+
+        b {
+            font-family: 'Arial';
+        }
+
+        p {
+            font-family: 'Arial';
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+
+        <!--MENU-->
+
+        <div class="menu_bar">
+            <ul>
+                <li class="active"><a href="../index.html"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li><a href="Aboutus.html"><i class="fa fa-users"></i> About us</a>
+                </li>
+                <li><a href="#"><i class="fa fa-heartbeat"></i> Services</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li class="hover-me"><a href="Softwares.html">Softwares</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="Softwares.html">The EC19</a></li>
+                                        <li><a href="how_it_works.html">How it works</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="Solutions.html"><i class="fa fa-lightbulb-o"></i> Solutions</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="Solutions.html">EC19</a></li>
+                            <li><a href="Solutions.html">EC19 - SARS-Cov2</a></li>
+                            <li><a href="Solutions.html">EC19 - COVID-19 </a></li>
+                            <li><a href="Solutions.html">EC19 - MERS-Cov </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="contact.html"><i class="fa fa-phone"></i> Contact</a>
+                </li>
+                <li><a href="sign_in.html"><i class="fa fa-sign-in"></i>Sign In</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--começando a 
+            Tela de login
+        -->
+
+        <div id="box1">
+        <div class="login_box">
+            <i style="color: #fff;" class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
+            <b style="font-size: 270%; color: rgb(49, 49, 49);"> Sign In</b>
+            <form class="box">
+                <div class="inputbox">
+                    <input type="text" required="">
+                    <label id="cpf_label">CPF</label>
+                </div>
+                <div class="inputbox">
+                    <input type="password" required="">
+                    <label id="password_label">Password</label>
+                </div>
+                <input type="submit" value="Login">
+                <br><br>
+                <a href="Sign_up.html"><input type="button" value="Sign up"></a>  
+            </form>
+            <br>
+            <a href="Password_recover.html">Forgot your password?</a>
+        </div>
+
+         <!--terminando a 
+            Tela de login
+        -->
+
+    </center>
+</body>
+
+</html>
+
+<script language="JavaScript" src="../JS/TechCare.js">
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+    
+<h1>Calculador de valor de pizza</h1>
+
+<br><br>
+
+<input id="Pizza_valor" type="text" placeholder="Valor da pizza">
+
+<br><br>
+
+<input id="qtd_amigos" type="text" placeholder="Quantidade de amigos">
+
+<br><br>
+
+<input id="valor_individual" type="text" placeholder="Valor individual à pagar">
+
+<br><br>
+
+<button onclick="calcula_valor_individual()">Rola pizza?</button>
+
+<br><br><br>
+
+<b id="mensagem_ocasional"></b>
+
+
+</center>
+</body>
+</html>
+
+<script>
+
+function calcula_valor_individual() {
+
+var custo_individual = Number (valor_individual.value);
+
+if (custo_individual >20) {
+    mensagem_ocasional.innerHTML = 'Deu ruim! Pizza muito cara';  
+}
+else {
+    mensagem_ocasional.innerHTML = 'Uhu! Vamos pedir a pizza!'; 
+    }
+}
+</script>

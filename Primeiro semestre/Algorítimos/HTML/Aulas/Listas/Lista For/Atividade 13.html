@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Sorte no amor...</h1>
+        <br>
+        <button onclick="exibir()">Ver minha sorte</button>
+        <br><br>
+        <div id="imagens"></div>
+        <div id="resultado"></div>
+    </center>
+</body>
+</html>
+
+<script>
+    
+    function exibir() {
+
+        resultado.innerHTML = '';
+        imagens.innerHTML = '';
+
+        var qtd_carta = 0;
+        var qtd_coracao = 0;
+        var sorteio_imagem = 0;
+
+        for (var contador = 1; contador <21; contador++) {
+            sorteio_imagem = parseInt (Math.random() * 2) +1;
+            if (sorteio_imagem == 1) {
+                qtd_carta++;
+                imagens.innerHTML += '<img src="carta.png" style="height: 100px;">';
+            }else {
+                qtd_coracao++;
+                imagens.innerHTML += '<img src="coracao.png" style="height: 100px;">';
+            }
+            if (qtd_carta > qtd_coracao) {
+                resultado.innerHTML = 'Você tem mais sorte no jogo';
+            }else {
+                resultado.innerHTML = 'Você tem mais sorte no amor';
+            }
+
+        }
+    }
+</script>

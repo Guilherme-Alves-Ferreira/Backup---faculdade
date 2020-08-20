@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+
+<h1>Calculador de conta de luz</h1>
+
+<br><br>
+
+<input id="energia_gasta" type="text" placeholder="Quantidade de kWh mensal">
+
+<br><br>
+
+<button onclick="calcula_luz()">Calcular conta de luz</button>
+
+<br><br><br>
+
+<div id="div_com_desconto"></div>
+
+<div id="div_sem_desconto"></div>
+
+</center>
+</body>
+</html>
+
+<script>
+
+function calcula_luz() {
+
+    div_com_desconto.innerHTML = ""
+
+    div_sem_desconto.innerHTML = ""
+    
+var kwh = Number (energia_gasta.value);
+
+var preço = kwh * 0.8;
+
+if (kwh <100) {
+
+var tem_desconto = preço * 0.9;
+
+div_com_desconto.innerHTML = `O preço da conta de luz com 10% de desconto é R$ ${tem_desconto.toFixed(2)}`;
+
+var tem_desconto = 0;
+}
+
+if (kwh >=100) {
+    div_sem_desconto.innerHTML = `O preço da conta de luz é R$ ${preço.toFixed(2)}`;
+}
+
+}
+
+
+</script>

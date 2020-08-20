@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+
+        <h1>Banco Itado</h1>
+<br><br>
+        <input id="input_saldo" type="text" placeholder="Digite o saldo da conta" style="text-align: center;">
+<br><br>
+        <input id="input_debito" type="text" placeholder="Valor do débito" style="text-align: center;">
+<br><br><br>
+         <button onclick="analisar()">Analisar conta</button>
+<br><br>
+         <div id="div_mensagem"></div>
+    </center>
+</body>
+</html>
+
+<script>
+
+function analisar() {
+
+    div_mensagem.innerHTML = ""
+
+    var saldo = Number (input_saldo.value);
+
+    var debito = Number (input_debito.value);
+
+    var saldo_restante = saldo - debito;
+
+    div_mensagem.innerHTML = saldo_restante <0 ? `o saldo atual da conta corrente é R$${saldo_restante.toFixed(2)}` : `o saldo atual da conta corrente é R$${saldo_restante.toFixed(2)}`;
+}
+</script>

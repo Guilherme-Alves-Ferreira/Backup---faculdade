@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Café com leite</h1>
+        <br>
+        <h3>Quantas xícaras de café com leite você acha que já bebeu?</h3>
+        <input  id="qtd_xicaras" type="text">
+        <br><br>
+        <button onclick="exibir()">Ver a quantidade</button>
+        <br><br>
+        <div id="colheres_leite"></div>
+        <div id="colheres_cafe"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function exibir() {
+
+        colheres_leite.innerHTML = '';
+        colheres_cafe.innerHTML = '';
+        
+
+        var xicaras = Number(qtd_xicaras.value);
+        var leite = xicaras;
+        var cafe = xicaras * 2;
+
+        for (var Contador = 0; Contador < leite; Contador++) {
+            colheres_leite.innerHTML += '<img src="leite.jpg" style="height: 100px;">';
+        }
+
+        for (var Contador = 0; Contador < cafe; Contador++) {
+            colheres_cafe.innerHTML += '<img src="cafe.jpg" style="height: 100px;">';
+        }
+    }
+</script>

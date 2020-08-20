@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Marvel VS DC</h1>
+        <br>
+        <select id="Combo">
+            <option value="000">- Escolha sua preferencia -</option>
+            <option value="1">Marvel</option>
+            <option value="2">DC</option>
+        </select>
+        <br><br>
+        <button onclick="exibir()">Ver programação semanal da tv</button>
+        <br><br>
+        <b id="resultado"></b>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function exibir() {
+
+        var preferencia = Combo.value;
+        
+        for (Contador = 1; Contador <5; Contador ++) {
+            var filme_sorteado = parseInt(Math.random() * 6);
+
+            if (preferencia == '000') {
+                resultado.innerHTML = 'Selecione sua preferência!'
+            } else if (filme_sorteado == preferencia) {
+                resultado.innerHTML =  `Você verá um filme que gosta no ${Contador}º dia`;
+                break;
+            } else {
+                resultado.innerHTML =  `É, ou lê um livro ou assiste um filme que não gosta mesmo`;
+            }
+            
+        }
+    }
+</script>

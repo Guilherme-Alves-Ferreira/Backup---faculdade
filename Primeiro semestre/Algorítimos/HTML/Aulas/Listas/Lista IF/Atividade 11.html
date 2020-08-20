@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+
+<h1>Analisador de uso NETFLIX</h1>
+
+<br><br><br>
+
+<input id="hora_dia" type="text" placeholder="Horário de uso">
+
+<br><br><br>
+
+<button onclick="Analisar()">Ver recomendação</button>
+
+<br><br><br>
+
+<div id="div_mensagem"></div>
+
+</center>
+</body>
+</html>
+
+<script>
+
+function Analisar() {
+
+    var hora = Number (hora_dia.value);
+
+    div_mensagem.innerHTML = `O horário ${hora} é adequado para assistir sua série favorita!`;
+
+    if (hora <19 ) {
+        div_mensagem.innerHTML = `Não é recomendável que você assista sua série favorita no horário ${hora}!`
+    }
+
+    if (hora >21 ) {
+        div_mensagem.innerHTML = `Não é recomendável que você assista sua série favorita no horário ${hora}!`
+    }
+}
+
+</script>

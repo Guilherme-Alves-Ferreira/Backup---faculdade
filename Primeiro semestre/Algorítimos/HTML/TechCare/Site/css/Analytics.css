@@ -1,0 +1,307 @@
+.bg {
+    padding-top: 150px ;
+}
+
+.alas_simples {
+    width: 80%;
+    height: 15%;
+    padding: 5px 10px;
+    margin-left: 300px;
+    margin-bottom: 200px;
+    border-radius: 25px;
+    border: gray 5px solid;
+}
+
+#status_simples {
+    width: 200px;
+    height: 20px;
+    margin: -40px 500px;
+    float: left;
+    background: greenyellow;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#status_intermediarios {
+    width: 200px;
+    height: 20px;
+    margin: -40px 500px;
+    float: left;
+    background: yellow;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#status_graves {
+    width: 200px;
+    height: 20px;
+    margin: -40px 500px;
+    float: left;
+    background: red;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.quantidade_alas_simples {
+    width: 180px;
+    height: 17px;
+    float: right;
+    margin: 10px 50px;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.quantidade_alas_simples b {
+    margin: 0;
+}
+
+.alas_simples_informacoes {
+    max-width: 50%;
+    padding: 5px 10px;
+}
+
+.alas_simples_informacoes .ala_1 {
+    width: 250px;
+    height: 100px;
+    background: white;
+    float: left;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 50px;
+    margin: 20px 20px;
+}
+
+
+.alas_simples_informacoes .ala_1 h2 {
+    margin: 0;
+}
+
+
+.ala1_simples_temperatura {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 400px;
+    margin: 20px 400px;
+    background: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.ala1_simples_temperatura b {
+    margin: 0;
+}
+
+.ala1_simples_umidade {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 20px 400px;
+    background: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.ala1_simples_umidade b {
+    margin: 0;
+}
+
+/*Alas intermediárias*/
+
+.alas_intermediarias {
+    width: 80%;
+    height: 15%;
+    padding: 5px 10px;
+    margin-left: 300px;
+    margin-bottom: 200px;
+    border-radius: 25px;
+    border: gray 5px solid;
+}
+
+.status_intermediarios {
+    width: 200px;
+    height: 20px;
+    margin: -40px 500px;
+    float: left;
+    background: white;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.quantidade_alas_intermediarias {
+    width: 180px;
+    height: 17px;
+    float: right;
+    margin: 10px 50px;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.quantidade_alas_intermediarias b {
+    margin: 0;
+}
+
+.alas_intermediarias_informacoes {
+    max-width: 50%;
+    padding: 5px 10px;
+}
+
+.alas_intermediarias_informacoes .ala_1 {
+    width: 250px;
+    height: 100px;
+    background: white;
+    float: left;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 50px;
+    margin: 20px 20px;
+}
+
+.alas_intermediarias_informacoes .ala_1 h2 {
+    margin: 0;
+}
+
+.ala1_intermediarias_temperatura {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 400px;
+    margin: 20px 400px;
+    background: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.ala1_intermediarias_temperatura b {
+    margin: 0;
+}
+
+.ala1_intermediarias_umidade {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 20px 400px;
+    background: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.ala1_intermediarias_umidade b {
+    margin: 0;
+}
+
+/*Alas graves*/
+
+.alas_graves {
+    width: 80%;
+    height: 15%;
+    padding: 5px 10px;
+    margin-left: 300px;
+    margin-bottom: 200px;
+    border-radius: 25px;
+    border: gray 5px solid;
+}
+
+.status_graves {
+    width: 200px;
+    height: 20px;
+    margin: -40px 500px;
+    float: left;
+    background: white;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.quantidade_alas_graves {
+    width: 180px;
+    height: 17px;
+    float: right;
+    margin: 10px 50px;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.quantidade_alas_graves b {
+    margin: 0;
+}
+
+.alas_graves_informacoes {
+    max-width: 50%;
+    padding: 5px 10px;
+}
+
+.alas_graves_informacoes .ala_1 {
+    width: 250px;
+    height: 100px;
+    background: white;
+    float: left;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 50px;
+    margin: 20px 20px;
+}
+
+.alas_graves_informacoes .ala_1 h2 {
+    margin: 0;
+}
+
+.ala1_graves_temperatura {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 400px;
+    margin: 20px 400px;
+    background: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.ala1_graves_temperatura b {
+    margin: 0;
+}
+
+.ala1_graves_umidade {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 20px 400px;
+    background: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.ala1_graves_umidade b {
+    margin: 0;
+}
+
+/*Grafico*/
+
+.grafico_temperatura {
+    margin: 300px auto;
+    border-radius: 25px;
+    background: whitesmoke;
+    width: 80%;
+    height: 30%;
+}
+
+#legendas {
+    margin: 100px auto;
+}
+
+#legendas h3 {
+    margin: 0;
+    margin-top: 30px;
+    font-family: sans-serif;
+}

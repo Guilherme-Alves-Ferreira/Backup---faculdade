@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Nutricionista virtual</h1>
+
+        <br><br>
+
+        <h2>Digite a quantidade de vezes que você come ou bebe os itens abaixo</h2>
+
+        <br>
+
+        <input type="text" id="paes" placeholder="Pães" style="text-align: center;">
+
+        <br><br>
+
+        <input type="text" id="bolachas" placeholder="Bolachas recheadas" style="text-align: center;">
+
+        <br><br>
+
+        <input type="text" id="copos_chocolate" placeholder="Copos de achocolatado" style="text-align: center;">
+
+        <br><br>
+        
+        <button onclick="verificar()">Verificar calorias</button>
+
+        <br><br>
+
+        <div id="resultado"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+
+        resultado.innerHTML = ""
+
+        var calorias_paes = Number (paes.value) * 50;
+
+        var calorias_bolachas = Number (bolachas.value) *80;
+
+        var calorias_copos_chocolate = Number (copos_chocolate.value) *70;
+
+        var calorias_totais = calorias_paes + calorias_bolachas + calorias_copos_chocolate;
+
+        if (calorias_totais <200 ) {
+            resultado.innerHTML = "Parabéns, vai sair em forma da quarentena!"
+        }else if (calorias_totais <=400 ) {
+            resultado.innerHTML = 'Cuidado, vai ficar mais "fofinho(a)" após quarentena!'
+        }else if ( calorias_totais >400 ) {
+            resultado.innerHTML = 'Bom, acho que muitos não vão te reconhecer após a quarenten'
+        }
+    }
+</script>

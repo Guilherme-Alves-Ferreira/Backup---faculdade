@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Escolinha 123</h1>
+    </center>
+
+    <br>
+
+    <button style="float: left; margin-left: 830px;" onclick="gerar_nota()">Nota</button>
+
+    <br><br>
+
+    <div style="float: left; margin-left: 830px;" id="div_nota1"></div>
+
+    <button style="float: right; margin-right: 830px; margin-top: -35px;" onclick="gerar_frequencia()">Frequência</button>
+
+    <br><br>
+
+    <div style="float: right; margin-right: 830px; margin-top: -35px;" id="div_frequencia"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function gerar_nota() {
+        var N1 = Number ((Math.random() * 12) -1).toFixed(2);
+
+        if (N1 < 0) {
+            div_nota1.innerHTML = 0;
+        }else if (N1 > 10) {
+            div_nota1.innerHTML = 10;
+        }else {
+            div_nota1.innerHTML = N1;
+        }
+    }
+
+   function gerar_frequencia() {
+    var Frequencia = Number ((Math.random() * 102) -1).toFixed(2);
+
+    if (Frequencia < 0) {
+        div_frequencia.innerHTML = 0;    
+   }else if (Frequencia > 100) {
+       div_frequencia.innerHTML = 100;
+   }else {
+       div_frequencia.innerHTML = `${Frequencia}%`;
+   }
+}
+
+</script>

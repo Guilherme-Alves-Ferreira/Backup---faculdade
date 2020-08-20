@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>3 e 5</h1>
+
+        <br>
+
+        <button onclick="Exibir()">Curto 3 e 5</button>
+
+        <br><br>
+
+        <span style="font-size: 150%;" id="span_numeros"></span>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    function Exibir() {
+
+        for (var contador = 1; contador <= 100; contador++) {
+            var tri = contador % 3 == 0;
+            var penta = contador % 5 == 0;
+            if (tri && penta) {
+                span_numeros.innerHTML += '<b>É TRI!É PENTA!</b> <br>';
+            } else if (tri) {
+                span_numeros.innerHTML += '<b>É TRI!</b> <br>';
+            } else if (penta) {
+                span_numeros.innerHTML += '<b>É PENTA!</b> <br>';
+            } else {
+                span_numeros.innerHTML += `${contador} <br>`;
+            }
+
+            // tri && penta ? '<b>É TRI!É PENTA!</b> <br>' : tri ? '<b>É TRI!</b> <br>' : penta ? '<b>É PENTA!</b> <br>' : `${contador} <br>`;
+        }
+    }
+</script>

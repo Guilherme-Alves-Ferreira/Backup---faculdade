@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 45 - Vetores</title>
+</head>
+<body>
+
+    <h3>Cadastre e consulte seus perssonagens favoritos</h3>
+
+    <input placeholder="Novo" id="novo_personagem">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br>
+
+    <input placeholder="Pesquisa" id="pesquisa">
+    <button onclick="pesquisar()">Pesquisar</button>
+    <br>
+    <div id="acompanhamento"></div> <br><br>
+    <div id="resultado"></div>
+
+    
+</body>
+</html>
+<script>
+    // vetor vazio
+    let personagens = [];
+
+    function cadastrar() {
+        // colocando um novo valor no vetor com push()
+        personagens.push(novo_personagem.value);
+        
+        // para saber quantos elementos há no vetor,
+        // usamos .length
+        acompanhamento.innerHTML = `Personagens cadastrados: ${personagens.length}`;
+    }
+
+    function pesquisar() {
+        resultado.innerHTML = '';
+
+        var numero_pesquisa = Number(pesquisa.value);
+
+        // a posição deve estar entre 0 e o tamanho do vetor (.length)
+        if (numero_pesquisa >= 1 && numero_pesquisa <= personagens.length) {
+            // -1 porque se ele pesquisou por 1, na verdade, usamos 0
+            // se ele pesquisou por 4, na verdade, usamos 3...
+            var encontrado = personagens[numero_pesquisa - 1];
+            resultado.innerHTML = `Encontrado: ${encontrado}`;
+        } else {
+            resultado.innerHTML = `Pesquise entre 1 e ${personagens.length}`;
+        }
+        
+    }
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Indicador de empresa</h1>
+
+        <br>
+
+        <input type="text" placeholder="nome da empresa" id="input_nome_empresa">
+
+        <br><br>
+
+        <input type="text" placeholder="Bolsa oferecida" id="input_bolsa">
+        
+        <br><br>
+        
+        <input type="text" placeholder="VR oferecido" id="input_VR">
+
+        <br><br>
+
+        <input type="text" placeholder="Tempo de deslocamento" id="input_Tempo_desloc">
+
+        <br><br><br>
+
+        <button onclick="analisar()">É preferida</button>
+
+        <div id="mensagem"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function analisar () {
+
+        var nome = input_nome_empresa.value;
+
+        var bolsa = Number (input_bolsa.value);
+
+        var VR = Number (input_VR.value);
+
+        var Tempo = Number (input_Tempo_desloc.value)
+
+        if (bolsa >= 1800 || VR >= 20 || Tempo <=30) {
+            mensagem.innerHTML = `A empresa ${nome} é uma de suas preferências`;
+        }else {
+            mensagem.innerHTML = `A empresa ${nome} está fora da sua lista`;
+        }
+    }
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceito Boolean</title>
+</head>
+<body>
+    
+    <input placeholder="Qual sua nota?" id="nota"> <br>
+    <input placeholder="Qual sua frequência?" id="frequencia"> <br>
+    <button onclick="analisar()">Analisar</button> <br>
+    <div>
+        Passou por nota: <b id="b_passou_nota">?</b> <br>
+        Passou por frequência: <b id="b_passou_frequencia">?</b> <br>
+    </div>
+
+</body>
+</html>
+<script>
+    function analisar() {
+        var valor_nota = Number(nota.value);
+        var valor_frequencia = Number(frequencia.value);
+
+        // variáveis BOOLEANAS, ou seja, que só comportam true ou false
+        var passou_nota = valor_nota >= 6;
+        var passou_frequencia = valor_frequencia >= 75;
+
+        // assim, essas 2 variáveis, poderão ser consultadas quantas vezes for necessário
+        // e sempre devolverão o true ou false do teste que as originou
+
+        b_passou_nota.innerHTML = passou_nota;
+        b_passou_frequencia.innerHTML = passou_frequencia;
+        
+    }
+</script>

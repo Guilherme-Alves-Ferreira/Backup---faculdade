@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #232323;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 80px;
+    border-bottom: rgb(10, 160, 160) 3px solid;
+    height: 80px;
+}
+
+.header a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.header li{
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.header .title-header{
+    float: left;
+    
+}
+
+.header .title-header h1{
+    margin: 0;
+}
+
+.header .title-header span{
+    margin: 0;
+    color: cyan;
+}
+
+.nav{
+    float: right;
+    margin-top: 40px;
+}
+
+.header .highlight, .header .current a{
+    color: cyan;
+    font-weight: bold;
+}
+
+.box_left{
+    margin: 35px;
+    float: left;
+    margin-left: 300px;
+    background-color: white;
+    width: 30%;
+    height: 700px;
+    border-top: cyan 5px solid;
+    border-left: cyan 5px solid;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.box_left .title h1{
+    margin: 0px;
+    padding-top: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.box_left .title p{
+    text-align: justify;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.box_right{
+    margin: 35px;
+    float: right;
+    margin-right: 300px;
+    background-color: white;
+    width: 30%;
+    height: 700px;
+    border-right: cyan 5px solid;
+    border-top: cyan 5px solid;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+}
+
+.box_right .title h1{
+    margin: 0px;
+    padding-top: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.box_right .title p{
+    text-align: justify;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.box_center{
+    margin-top: 800px;
+    margin-bottom: 80px;
+    background-color: white;
+    width: 69%;
+    height: 250px;
+    border: cyan 5px solid;
+    border-top: none;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.box_center .title h1{
+    margin: 0;
+    padding-top: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.box_center .title p{
+    text-align: justify;
+    padding: 30px;
+    font-size: 20px;
+}

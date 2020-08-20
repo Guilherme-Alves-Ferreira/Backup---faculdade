@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Desafio</h1>
+
+        <br>
+
+        <select id="tipo_arroz">
+            <option value="- Tipo de arroz -">- Tipo de arroz -</option>
+            <option value="Arroz integral">Arroz integral</option>
+            <option value="Arroz branco">Arroz branco</option>
+        </select>
+
+        <br><br>
+
+        <input type="text" placeholder="Tempo de cozimento" id="input_tempo">
+
+        <br><br>
+
+        <input type="text" placeholder="Quantidade de sal usado" id="input_sal">
+
+        <br><br>
+
+        <button onclick="Analisar()">Avaliar arroz</button>
+        
+        <div id="mensagem"></div>
+
+        <br><br>
+
+        <img src="" id="imagem">
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function Analisar() {
+
+    
+       var arroz = tipo_arroz.value;
+
+       var tempo = Number (input_tempo.value);
+
+       var qtd_sal = Number (input_sal.value)
+
+       if (arroz == "Arroz branco" && tempo == 10 && qtd_sal == 10 ) {
+        mensagem.innerHTML = "Arroz perfeito"
+        imagem.src = "Arroz.jpg"
+       }else if( arroz == "Arroz integral" && tempo == 20 && qtd_sal == 15 ) {
+        mensagem.innerHTML = "Arroz perfeito"
+        imagem.src = "arroz_inte.png"
+       }else {
+        mensagem.innerHTML = "Seu Arroz não está perfeito"
+        imagem.src = "ele.jpg"
+       }
+    }
+</script>

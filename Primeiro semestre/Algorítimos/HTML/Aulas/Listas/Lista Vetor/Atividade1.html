@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>FilmesHD</h1>
+        <br>
+        <input id="filme_novo" type="text" placeholder="Digite seu filme aqui..."><button onclick="cadastrar()">Cadastrar</button>
+        <br><br>
+        <span id="filme_favorito"></span>
+        <br><br>
+        <span id="terceiro_favorito"></span>
+        <br><br>
+        <span id="filmes_totais"></span>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    let filmes = [];
+
+    function cadastrar() {
+        filmes.push(filme_novo.value);
+        filme_favorito.innerHTML = `Filme favorito: ${filmes[0]}`; 
+        filmes_totais.innerHTML = `Filmes cadastrados: ${filmes.length}`;
+
+        if (filmes.length >= 3) {
+            terceiro_favorito.innerHTML = `Seu 3° filme favorito: ${filmes[2]}`;
+        } else {
+            terceiro_favorito.innerHTML = 'Ainda não existe';
+        }
+
+
+    }
+</script>

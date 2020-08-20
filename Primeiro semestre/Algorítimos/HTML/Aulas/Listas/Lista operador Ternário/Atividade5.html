@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>escola 123</h1>
+
+        <br>
+
+        <input id="input_1" type="text" placeholder="Digite a primeira nota">
+
+        <br><br>
+
+        <input id="input_2" type="text" placeholder="Digite a segunda nota">
+
+        <br>
+
+        <button onclick="verificar()">verificar resultado</button>
+
+        <br><br>
+
+        <div id="resultado"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+function verificar() {
+
+    resultado.innerHTML = ''
+
+    var N1 = Number (input_1.value);
+
+    var N2 = Number (input_2.value);
+
+    var media = (N1 + N2) / 2;
+
+    resultado.innerHTML = media <6 ? 'Infelizmente reprovado' : media <=7.5 ? 'Aprovado - Automação, Seg ou Testes' : 'Aprovado - Dev';
+
+}
+</script>

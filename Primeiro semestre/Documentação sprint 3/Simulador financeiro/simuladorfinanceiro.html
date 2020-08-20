@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style type="text/css">
+   
+   #cx1{
+          background-color: rgb(7, 155, 147); 
+          width:150%; 
+          height: 80px; 
+          position: absolute;
+          top: 0px;
+          left: 0px;
+         }
+         
+        #text1{
+          font-family: 'Arial';
+          letter-spacing: 8px;
+          font-size: 400%;
+          color: #0e283a;
+          position: absolute;
+          top: -40px;
+          left: 550px 
+        }
+
+
+      
+     #cx2{
+   
+      background-color: whitesmoke;
+      width: 700px;
+      height: 700px;
+      position: absolute;
+      top: 95px ;
+      left: 750px;
+      border-radius: 10%;
+
+
+
+     }
+   
+       #img{
+     position: absolute;
+     left: 55px;
+     top: 55px;
+
+       }
+
+
+       
+      
+    </style>
+
+    
+</head>
+
+
+<body >
+ 
+  <div id="cx1"><h1 id="text1">Tech Care</h1></div>
+
+
+<div id="cx2">
+
+  <img width="600px" src="hospital.png" id="img">
+
+</div>
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+Quantos metros possui a ala médica que deseja implementar o sistema ?<input id="metros" type="number" placeholder="M²">
+
+<br>
+ <br>
+   
+ Quantos leitos possui essa ala médica ? <input id="leitos" type="number">
+
+ <br>
+ 
+  <button onclick="calcular()">Calcular</button>
+
+ <div id="div_teste"></div>
+ <div id="div_arduino"></div>
+ <div id="div_preco"></div>
+ <div id="preco_total"></div>
+
+</body>
+</html>
+
+<script>
+  function calcular(){
+  var m_quadrados = Number(metros.value) // metros quadrados da ala médica
+  var numero_leitos = Number(leitos.value) //numero de leitos da ala médica 
+  var mq_porleito = (m_quadrados) / (numero_leitos) // Quantidade de metros quadrados em cada leito
+
+  div_teste.innerHTML = mq_porleito .toFixed(2) + ' m²' // Exibindo metros quadrados por leito
+
+  var arduino_pormq = m_quadrados / Number(10) /* Dividi a quantidade de metros quadrados por 10, que é o radio de alcance do sensor. Para identificar o numero 
+  de sensores*/
+
+  div_arduino.innerHTML = arduino_pormq + ' Arduinos' // Exibindo o numero de sensores de arduino 
+
+
+  var preco_arduino = arduino_pormq * Number(40) /* Multipliquei o número de sensores por 40, que é valor de cada sensor. Para identificar o valor gasto com
+  os sensores*/
+
+  div_preco.innerHTML = preco_arduino + ' valor dos arduinos' //Exibindo o valor gasto com os sensores
+
+  var gasto_total = preco_arduino + Number(5000) //Somei o valor gasto com o arduino, com o valor da mão de obra
+  
+  preco_total.innerHTML = gasto_total // Exibindo o preço do serviço
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+
+
+</script>

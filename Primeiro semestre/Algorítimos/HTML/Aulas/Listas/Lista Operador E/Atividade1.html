@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Avaliador</h1>
+
+        <br>
+
+        <input type="text" placeholder="Renda individual" id="input_renda_individual">
+
+        <br><br>
+
+        <input type="text" placeholder="Renda familiar" id="input_renda_familiar">
+
+        <br><br>
+
+        <button onclick="analisar()">Verificar ajuda</button>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function analisar() {
+
+        var renda1 = Number (input_renda_individual.value);
+
+        var renda2 = Number (input_renda_familiar.value);
+
+        if (renda1 <=1050 && renda2 <=2100) {
+            alert("Você terá direito!");
+        }else {
+            alert("Você NÃO terá direito")
+        }
+    }
+</script>

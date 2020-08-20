@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+
+        <h1>Auto escola</h1>
+<br><br>
+        <input id="Nome" type="text" placeholder="Nome completo" style="text-align: center;">
+<br><br>
+        <input id="input_idade" type="text" placeholder="Idade" style="text-align: center;">
+<br><br><br>
+         <button onclick="avaliar()">Avaliar aluno</button>
+
+         <div id="div_mensagem"></div>
+    </center>
+</body>
+</html>
+
+<script>
+
+function avaliar() {
+
+    div_mensagem.innerHTML = ""
+
+    var idade = Number (input_idade.value)
+
+    if (idade >= 18) {
+        div_mensagem.innerHTML = `${Nome.value} vamos tirar a CNH?`;
+    }
+    else {
+        div_mensagem.innerHTML = `${Nome.value} vai jogar PlayStation!`;
+    }
+}
+</script>

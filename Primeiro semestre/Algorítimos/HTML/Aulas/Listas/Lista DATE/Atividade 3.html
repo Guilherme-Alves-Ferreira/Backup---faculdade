@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Idade 3.0</h1>
+        <br>
+        <b>Insira sua idade</b>
+        <br><br>
+        <input type="text" id="inpt_data">
+        <br><br>
+        <select id="slct_sexo">
+            <option value="1">Homem</option>
+            <option value="2">Mulher</option>
+        </select>
+        <button onclick="simular()">Simular Aposentadoria</button>
+        <br><br>
+        <div id="resultado"></div>
+    </center>
+</body>
+
+</html>
+<script>
+    function simular() {
+
+        let sexo_pessoa = slct_sexo.value;
+        let idade = Number(inpt_data.value);
+        let aposentar = sexo_pessoa == 1 ? 65:60;
+        let data_atual = new Date();
+        let data_depois = (data_atual.getFullYear()) + aposentar;
+        let data_aposentar  = Number (data_depois - idade);
+        let diferenca = Number (data_aposentar - data_atual.getFullYear());
+        resultado.innerHTML = `Faltam <b>${diferenca}</b> anos para se aposentar. Poderá se aposentar em <b>${data_atual.getDate()}/${data_atual.getMonth() + 1}/${data_aposentar}</b>`;
+    }
+</script>

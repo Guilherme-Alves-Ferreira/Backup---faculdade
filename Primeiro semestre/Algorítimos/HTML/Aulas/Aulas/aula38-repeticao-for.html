@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 38 - for</title>
+</head>
+<body>
+    <div id="frases"></div>
+</body>
+</html>
+<script>
+
+// mostrando uma mesma frase na tela 12x
+
+/*
+ A estrutura de repetição 'for' é composta de 3 partes OPCIONAIS:
+ 1 - Um instrução de código executada 1 (uma) vez antes do inicio do primeiro loop
+ 2 - Condição de repetição
+ 3 - ÚLTIMA instrução virtual do 'for'
+*/
+for (var contador=0; contador < 12; contador++) {
+    frases.innerHTML += `${contador} - Eu sou a lenda! <br>`;
+}
+
+frases.innerHTML += `<br>----------${contador}------------<br><br>`;
+
+/*
+var contador=0; 
+while (contador < 12) {
+    frases.innerHTML += `${contador} - Eu sou a lenda! <br>`;
+    contador++;
+}
+*/
+
+/*
+for (;;) {
+    // quantas vezes eu repito?
+    // LOOP INFINITO com for
+}
+*/
+
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 46 - Iterando em Vetores com for</title>
+</head>
+<body>
+    <input placeholder="Novo" id="novo_personagem">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br>
+    <br>
+    <div id="acompanhamento"></div> <br><br>
+
+    
+</body>
+</html>
+<script>
+    // vetor vazio
+    let personagens = [];
+
+    function cadastrar() {
+        // colocando um novo valor no vetor com push()
+        personagens.push(novo_personagem.value);
+        
+        // para saber quantos elementos há no vetor,
+        // usamos .length
+        acompanhamento.innerHTML = `Personagens cadastrados: ${personagens.length} <br>`;
+
+        // iterando em todos os elementos do vetor com 'for'
+        for (let posicao=0; posicao<personagens.length; posicao++) {
+            acompanhamento.innerHTML += `${personagens[posicao]} <br>`;
+        }
+    }
+
+    
+</script>

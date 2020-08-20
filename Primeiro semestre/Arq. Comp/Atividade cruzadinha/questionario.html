@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Questionário de eletrônica</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<center>
+
+		<div class="container">
+			<h1>Questionário de eletrônica</h1>
+			<div id="pontuacao">
+				<h2>Seus status</h2>
+				<ul>
+					<li>Pontuação: <b id="b_pontos"></b></li>
+					<li>Acertos: <b id="b_acertos"></b></li>
+					<li>Erros: <b id="b_erros"></b></li>
+				</ul>
+			</div>
+			<button id="btn_start" onclick="exibir_regras()">JOGAR!</button>
+			<div id="regras">
+				<h1>As Regras</h1>
+				<ul>
+					<li>Cada questão errada custará à você 50 pontos!</li>
+					<li>Tente concluir o questionário sem pesquisar nada, hein?!</li>
+					<li>Acumule a maior quantidade de pontos que conseguir e compare com seus amigos!</li>
+				</ul>
+				<button id="btn_regras" onclick="começar()">Entendi!</button>
+			</div>
+			<div id="questionario_id" class="questionario">
+				<div id="questao1" class="questao">
+					<img id="img1" src=""><span><input id="inpt_resposta1" type="text"> Responsável por calcular e
+						realizar tarefas determinadas pelo usuário...</span> | <button onclick="verificar1()">Verificar
+						resposta</button>
+				</div>
+				<div id="questao2" class="questao">
+					<img id="img2" src=""> <span><input id="inpt_resposta2" type="text">  Unidade lógica aritímetica que realiza operações de adição e booleana....</span> | <button
+						onclick="verificar2()">Verificar resposta</button>
+				</div>
+				<div id="questao3" class="questao">
+					<img id="img3" src=""> <span><input id="inpt_resposta3" type="text"> memórias denrto da própria CPU,
+						responsáveis por resultados imediatos...</span> | <button onclick="verificar3()">Verificar
+						resposta</button>
+				</div>
+				<div id="questao4" class="questao">
+					<img id="img4" src=""><span><input id="inpt_resposta4" type="text"> Memória volátil e é reconhecida
+						como memória primária...</span> | <button onclick="verificar4()">Verificar resposta</button>
+				</div>
+				<div id="questao5" class="questao">
+					<img id="img5" src=""><span><input id="inpt_resposta5" type="text"> Memória que permite apenas a
+						leitura dos dados armazenados nela...</span> | <button onclick="verificar5()">Verificar
+						resposta</button>
+				</div>
+				<div id="questao6" class="questao">
+					<img id="img6" src=""> <span><input id="inpt_resposta6" type="text"> Uma memória não
+						volátil...</span> | <button onclick="verificar6()">Verificar resposta</button>
+				</div>
+				<div id="questao7" class="questao">
+					<img id="img7" src=""> <span><input id="inpt_resposta7" type="text"> Memória não volátil cujos dados
+						podem ser atualizados...</span> | <button onclick="verificar7()">Verificar resposta</button>
+				</div>
+				<div id="questao8" class="questao">
+					<img id="img8" src=""> <span><input id="inpt_resposta8" type="text"> Memória não volátil cuja função
+						é armazenar grandes quantidades de informação... </span> | <button
+						onclick="verificar8()">Verificar resposta</button>
+				</div>
+				<div id="questao9" class="questao">
+					<img id="img9" src=""><span><input id="inpt_resposta9" type="text"> Permite que os periféricos
+						acessem diretamente a memória RAM...</span> | <button onclick="verificar9()">Verificar
+						resposta</button>
+				</div>
+				<div id="questao10" class="questao">
+					<img id="img10" src=""> <span><input id="inpt_resposta10" type="text"> Linha de controle digital
+						usada para selecionar um dos circuitos integrados...</span> | <button
+						onclick="verificar10()">Verificar resposta</button>
+				</div>
+				<div id="questao11" class="questao">
+					<img id="img11" src=""><span><input id="inpt_resposta11" type="text"> Conjunto de linhas usadas para
+						conectar dois ou mais dispositivos e transportar informações...</span> | <button
+						onclick="verificar11()">Verificar resposta</button>
+				</div>
+				<div id="questao12" class="questao">
+					<img id="img12" src=""> <span><input id="inpt_resposta12" type="text"> sistema dentro de um
+						computador ou dispositivo, consistindo em um conector ou conjunto de fios, que fornece
+						transporte de dados...</span> | <button onclick="verificar12()">Verificar resposta</button>
+				</div>
+				<div id="questao13" class="questao">
+					<img id="img13" src=""> <span><input id="inpt_resposta13" type="text"> Empresa fabricante da linha
+						de processadores I5 e I7...</span> | <button onclick="verificar13()">Verificar resposta</button>
+				</div>
+				<div id="questao14" class="questao">
+					<img id="img14" src=""> <span><input id="inpt_resposta14" type="text"> Linha de processadores que
+						aborda a utilização da microarquitetura Nehalem...</span> | <button
+						onclick="verificar14()">Verificar resposta</button>
+				</div>
+				<div id="questao15" class="questao">
+					<img id="img15" src=""> <span><input id="inpt_resposta15" type="text"> marca o retorno do
+						Hyper-Threading, que cria dois núcleos virtuais a partir de cada núcleo físico...</span> |
+					<button onclick="verificar15()">Verificar resposta</button>
+				</div>
+				<div id="questao16" class="questao">
+					<img id="img16" src=""><span><input id="inpt_resposta16" type="text"> Processador que possui dois
+						núcleos...</span> | <button onclick="verificar16()">Verificar resposta</button>
+				</div>
+				<div id="questao17" class="questao">
+					<img id="img17" src=""><span><input id="inpt_resposta17" type="text"> Processador que possui quatro
+						núcleos...</span> | <button onclick="verificar17()">Verificar resposta</button>
+				</div>
+			</div>
+			<button onclick="exibir_resultados()" id="btn_end">Verificar resultados!</button>
+
+			<div id="resultado_id" class="resultado">
+				<h1>Resultado da partida</h1>
+				<div id="podium">
+					<div id="terceiro_lugar">
+						<h2 id="voce3">VOCÊ!</h2>
+						<img src="css/img/medal.png" style="height: 50px">
+						<h1>3°</h1>
+					</div>
+					<div id="primeiro_lugar">
+						<h2 id="voce1">VOCÊ!</h2>
+						<img src="css/img/gold.png" style="height: 50px">
+						<h1>1°</h1>
+					</div>
+					<div id="segundo_lugar">
+						<h2 id="voce2">VOCÊ!</h2>
+						<img src="css/img/silver.png" style="height: 50px">
+						<h1>2°</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>
+
+</body>
+
+</html>
+
+<script>
+
+	// Questões estão escondidas
+
+	questao1.style.display = 'none';
+	questao2.style.display = 'none';
+	questao3.style.display = 'none';
+	questao4.style.display = 'none';
+	questao5.style.display = 'none';
+	questao6.style.display = 'none';
+	questao7.style.display = 'none';
+	questao8.style.display = 'none';
+	questao9.style.display = 'none';
+	questao10.style.display = 'none';
+	questao11.style.display = 'none';
+	questao12.style.display = 'none';
+	questao13.style.display = 'none';
+	questao14.style.display = 'none';
+	questao15.style.display = 'none';
+	questao16.style.display = 'none';
+	questao17.style.display = 'none';
+	btn_end.style.display = 'none';
+	resultado_id.style.display = 'none';
+
+
+	// Botão que exibe as regras
+
+	function exibir_regras() {
+		regras.style.display = 'block'
+		btn_start.style.display = 'none'
+	}
+
+	// O jogo começa
+
+	function começar() {
+		questao1.style.display = 'block'
+		regras.style.display = 'none'
+	}
+
+	// Variáveis globais são criadas
+
+	var pontos = 0;
+	var acertos = 0;
+	var erros = 0;
+
+	// Cada botão faz a verificação das repostas usando variáveis booleanas
+
+	function verificar1() {
+
+		var resposta_q1 = inpt_resposta1.value == 'CPU' || inpt_resposta1.value == 'cpu';
+
+		if (resposta_q1) {
+			inpt_resposta1.style.color = '#16a085';
+			questao2.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img1.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta1.style.color = '#d63031';
+			img1.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar2() {
+
+		var resposta_q2 = inpt_resposta2.value == 'ULA' || inpt_resposta2.value == 'ula';
+
+		if (resposta_q2) {
+			inpt_resposta2.style.color = 'green';
+			questao3.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img2.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta2.style.color = 'red';
+			img2.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar3() {
+
+		var resposta_q3 = inpt_resposta1.value == 'Registradores' || inpt_resposta3.value == 'registradores' || inpt_resposta3.value == 'REGISTRADORES';
+
+		if (resposta_q3) {
+			inpt_resposta3.style.color = 'green';
+			questao4.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img3.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta3.style.color = 'red';
+			img3.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar4() {
+
+		var resposta_q4 = inpt_resposta1.value == 'RAM' || inpt_resposta4.value == 'ram';
+
+		if (resposta_q4) {
+			inpt_resposta4.style.color = 'green';
+			questao5.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img4.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta4.style.color = 'red';
+			img4.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar5() {
+
+		var resposta_q5 = inpt_resposta1.value == 'ROM' || inpt_resposta5.value == 'rom';
+
+		if (resposta_q5) {
+			inpt_resposta5.style.color = 'green';
+			questao6.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img5.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta5.style.color = 'red';
+			img5.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar6() {
+
+		var resposta_q6 = inpt_resposta6.value == 'Eprom' || inpt_resposta6.value == 'eprom' || inpt_resposta6.value == 'EPROM';
+
+		if (resposta_q6) {
+			inpt_resposta6.style.color = 'green';
+			questao7.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img6.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta6.style.color = 'red';
+			img6.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar7() {
+
+		var resposta_q7 = inpt_resposta1.value == 'Flash' || inpt_resposta7.value == 'flash' || inpt_resposta7.value == 'FLASH';
+
+		if (resposta_q7) {
+			inpt_resposta7.style.color = 'green';
+			questao8.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img7.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta7.style.color = 'red';
+			img7.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar8() {
+
+		var resposta_q8 = inpt_resposta1.value == 'Memória de massa' || inpt_resposta8.value == 'memória de massa' || inpt_resposta8.value == 'MEMÓRIA DE MASSA';
+
+		if (resposta_q8) {
+			inpt_resposta8.style.color = 'green';
+			questao9.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img8.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta8.style.color = 'red';
+			img8.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar9() {
+
+		var resposta_q9 = inpt_resposta9.value == 'DMA' || inpt_resposta9.value == 'dma';
+
+		if (resposta_q9) {
+			inpt_resposta9.style.color = 'green';
+			questao10.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img9.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta9.style.color = 'red';
+			img9.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar10() {
+
+		var resposta_q10 = inpt_resposta10.value == 'CS' || inpt_resposta10.value == 'cs';
+
+		if (resposta_q10) {
+			inpt_resposta10.style.color = 'green';
+			questao11.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img10.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta10.style.color = 'red';
+			img10.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar11() {
+
+		var resposta_q11 = inpt_resposta1.value == 'Address bus' || inpt_resposta11.value == 'address bus' || inpt_resposta11.value == 'ADDRESS BUS';
+
+		if (resposta_q11) {
+			inpt_resposta11.style.color = 'green';
+			questao12.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img11.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta11.style.color = 'red';
+			img11.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar12() {
+
+		var resposta_q12 = inpt_resposta12.value == 'Data bus' || inpt_resposta12.value == 'data bus' || inpt_resposta12.value == 'DATA BUS';
+
+		if (resposta_q12) {
+			inpt_resposta12.style.color = 'green';
+			questao13.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img12.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta12.style.color = 'red';
+			img12.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar13() {
+
+		var resposta_q13 = inpt_resposta13.value == 'Intel' || inpt_resposta13.value == 'INTEL' || inpt_resposta13.value == 'intel';
+
+		if (resposta_q13) {
+			inpt_resposta13.style.color = 'green';
+			questao14.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img13.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta13.style.color = 'red';
+			img13.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar14() {
+
+		var resposta_q14 = inpt_resposta14.value == 'I5' || inpt_resposta14.value == 'i5';
+
+		if (resposta_q14) {
+			inpt_resposta14.style.color = 'green';
+			questao15.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img14.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta14.style.color = 'red';
+			img14.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar15() {
+
+		var resposta_q15 = inpt_resposta15.value == 'I7' || inpt_resposta15.value == 'i7';
+
+		if (resposta_q15) {
+			inpt_resposta15.style.color = 'green';
+			questao16.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img15.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta15.style.color = 'red';
+			img15.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar16() {
+
+		var resposta_q16 = inpt_resposta16.value == 'Dual core' || inpt_resposta16.value == 'dual core' || inpt_resposta16.value == 'DUAL CORE';
+
+		if (resposta_q16) {
+			inpt_resposta16.style.color = 'green';
+			questao17.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img16.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta16.style.color = 'red';
+			img16.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function verificar17() {
+
+		var resposta_q17 = inpt_resposta16.value == 'Quad core' || inpt_resposta17.value == 'quad core' || inpt_resposta17.value == 'QUAD CORE';
+
+		if (resposta_q17) {
+			inpt_resposta17.style.color = 'green';
+			btn_end.style.display = 'block'
+			pontos += 100;
+			acertos++;
+			img17.src = 'css/img/star.png'
+			inpt_resposta1.disabled = true;
+			b_pontos.innerHTML = pontos;
+			b_acertos.innerHTML = acertos;
+		} else {
+			inpt_resposta17.style.color = 'red';
+			img17.src = 'css/img/close.png'
+			erros++;
+			pontos -= 50;
+			b_pontos.innerHTML = pontos;
+			b_erros.innerHTML = erros;
+		}
+	}
+
+	function exibir_resultados() {
+		btn_end.style.display = 'none';
+		questionario_id.style.display = 'none';
+	    resultado_id.style.display = 'block';
+		voce3.style.display = 'none'
+		voce1.style.display = 'none'
+		voce2.style.display = 'none'
+	if (pontos < 900) { 
+		voce3.style.display = 'block'
+	} else if (pontos <1400) {
+		voce2.style.display = 'block'
+	} else {
+		voce1.style.display = 'block'
+	}
+	}
+
+	b_pontos.innerHTML = pontos;
+	b_acertos.innerHTML = acertos;
+	b_erros.innerHTML = erros;
+</script>

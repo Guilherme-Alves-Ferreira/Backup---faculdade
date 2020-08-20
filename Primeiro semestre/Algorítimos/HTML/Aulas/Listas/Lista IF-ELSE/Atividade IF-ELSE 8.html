@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Verificador de temperatura</h1>
+<br><br>
+        <input id="input_temperatura" type="text" placeholder="Temperatura do ambiente">
+<br><br>
+        
+        <button onclick="verificar()">Verificar clima</button>
+
+<br><br>
+
+        <img id="comida" src="" style="height: 300px;">
+
+    </center>
+</body>
+</html>
+
+<script>
+
+function verificar() {
+
+    var temperatura = Number (input_temperatura.value);
+
+    if (temperatura <10 ) {
+        comida.src = "picanha.jpg"
+    }
+    else {
+        comida.src = "podre.jpg"
+    }
+}
+</script>

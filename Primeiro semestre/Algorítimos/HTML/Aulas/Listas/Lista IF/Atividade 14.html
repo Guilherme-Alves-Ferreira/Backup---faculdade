@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+
+<h1>Pizza Rãti</h1>
+
+<br><br><br>
+
+<input id="input_distancia" type="text" placeholder="Distância em KM">
+
+<br><br>
+
+<button onclick="verificar()">Verificar disponibilidade</button>
+
+<br><br>
+
+<div id="div_resultado"></div>
+
+</center>
+</body>
+</html>
+
+<script>
+
+function verificar() {
+
+    var distancia = Number (input_distancia.value);
+
+    if (distancia >=250 ) {
+        div_resultado.innerHTML = `A Pizza Rãti não entrega neste endereço!`;
+    }
+
+    if (distancia <250 ) {
+        div_resultado.innerHTML = `A sua pizza será entregue, porém o valor de entrega é de R$ 25,00`;
+    }
+
+    if (distancia <50 ) {
+        div_resultado.innerHTML = `A sua pizza será entregue e não custará nada para você :)`;
+    }
+}
+
+
+
+
+
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Coquinha</h1>
+        <br>
+        <h3>Quantas "coca-cola" você acha que já bebeu?</h3>
+        <input  id="qtd_cocas" type="text">
+        <br><br>
+        <button onclick="exibir()">Ver a quantidade</button>
+        <br><br>
+        <div id="garrafas"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function exibir() {
+
+        garrafas.innerHTML = '';
+
+        var coca = Number(qtd_cocas.value);
+
+        for (var Contador = 0; Contador < coca; Contador++) {
+            garrafas.innerHTML += '<img src="coca_garrafa.jpg" style="height: 100px;">';
+        }
+    }
+</script>

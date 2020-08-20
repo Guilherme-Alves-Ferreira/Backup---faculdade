@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+    
+<h1>Analisador de desempenho</h1>
+
+<br><br>
+
+<input id="N1" type="text" placeholder="Primeira nota">
+
+<br><br>
+
+<input id="N2" type="text" placeholder="Segunda nota">
+
+<br><br>
+
+<input id="N3" type="text" placeholder="Terceira nota">
+
+<br><br>
+
+<button onclick="calcular_media()">Analisar desempenho</button>
+
+<br><br><br>
+
+<b id="div_media"></b>
+
+<br><br>
+
+<b style="display: none;" id="parabens">Parabéns, você é fora de série!</b>
+
+
+</center>
+</body>
+</html>
+
+<script>
+
+function calcular_media() {
+
+var Nota1 = Number (N1.value);
+
+var Nota2 = Number (N2.value);
+
+var Nota3 = Number (N3.value);
+
+var Media = (Nota1 + Nota2 + Nota3) /3
+
+div_media.innerHTML =`Sua nota foi de ${Media.toFixed(2)}`;
+
+if (Media >=9.4) {
+    parabens.style.display = 'block';  
+}
+
+
+}
+</script>

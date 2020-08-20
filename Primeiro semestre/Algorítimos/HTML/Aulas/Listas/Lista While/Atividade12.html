@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Elefantinhos</h1>
+
+        <br>
+
+       <input id="input_elefantes" type="text" placeholder="Quantidade de elefantes" style="text-align: center;"> 
+
+       <br><br>
+
+       <button onclick="atazanar()">Atazanar a médium</button>
+
+       <br><br>
+
+       <div id="resultado"></div>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function atazanar() {
+        
+        resultado.innerHTML = '';
+
+        var contador = 1;
+        var qtd_elefantes = Number (input_elefantes.value);
+
+        while (contador < qtd_elefantes) {
+                var qtd_incomodam = 0;
+                resultado.innerHTML += '<i>1 elefante incomoda muita gente!</i> <br>'
+                resultado.innerHTML += `<i>${contador +1} elefantes</i>`;
+                while (qtd_incomodam < contador +1) {
+                    resultado.innerHTML += '<i>, incomodam</i>';
+                    qtd_incomodam++;
+                }
+                resultado.innerHTML += '<i> muito mais!</i> <br> <br>'
+                contador ++;
+        }
+        
+
+    }
+</script>

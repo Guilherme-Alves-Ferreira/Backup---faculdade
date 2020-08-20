@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Gerador de números cabalísticos</h1>
+
+        <br>
+
+        <button onclick="Gerar()">Quero um cabalístico</button>
+
+        <br><br>
+
+        <h1 id="numero"></h1>
+
+        <h2 id="mensagem"></h2>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function Gerar() {
+
+        var resultado = parseInt (Math.random() * 145);
+
+        numero.innerHTML = resultado;
+
+        if (resultado == 3 || resultado == 4 || resultado == 7 || resultado == 10 || resultado == 12 || resultado == 144) {
+            mensagem.innerHTML = 'Eu S2 números cabalísticos!';
+        }else {
+            mensagem.innerHTML = 'Ah, me dá um número bom na próxima!';
+        }
+    }
+
+</script>

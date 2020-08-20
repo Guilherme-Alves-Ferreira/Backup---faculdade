@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Analisador de desempenho</h1>
+
+        <input id="input_partidas" type="text" placeholder="Partidas jogadas">
+
+<br><br>
+
+        <input id="input_gols" type="text" placeholder="Gols marcados">
+
+<br><br><br>
+
+        <button onclick="analisar()">Estudar atacante</button>
+
+<br><br><br>
+
+        <div id="resultado"></div>
+
+<br>
+
+        <img id="jogador" src="">
+
+<br>
+
+        <div id="media_jogador"></div>
+
+
+    </center>
+</body>
+</html>
+
+<script>
+
+function analisar() {
+
+    var partidas = Number (input_partidas.value);
+
+    var gols = Number (input_gols.value);
+
+    var media = gols / partidas
+
+    if (media <0.2 ) {
+        resultado.innerHTML =`Melhor mudar de posição`;
+        jogador.src = "triste.jpg"
+    }
+    else {
+        if ( media <=0.6) {
+        resultado.innerHTML =`Atacante mediano`;
+        jogador.src = "comum.jpg"
+    }
+    else {
+        resultado.innerHTML =`Atacante de futuro`;
+        jogador.src = "feliz.jpeg"
+    }
+    }
+
+    media_jogador.innerHTML = `Sua média de gols/partida é de ${media.toFixed(1)}`;
+    
+}
+    
+</script>

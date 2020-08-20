@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+    <h1>Torcedores de SP</h1>
+
+    <br><br>
+
+    <h3>Para qual time grande de São Paulo você torce?</h3>
+    <select id="Times">
+        <option value="- Selecione um time -">- Selecione um time -</option>
+        <option value="Salve o Corinthians">Corinthians</option>
+        <option value="Salve o Tricolor paulista">São Paulo</option>
+        <option value="Agora que dá a bola é o Santos">Santos</option>
+        <option value="Salve o alviverde imponente">Palmeiras</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="falar_sobre()">Fale sobre esse time</button>
+
+    <br><br>
+
+    <div style="background-color: black; color: white; width: 10%; border-radius: 5px;" id="resultado_corinthians"></div>
+
+    <div style="background-color: black; color: red; width: 10%; border-radius: 5px;" id="resultado_sp"></div>
+
+    <div style="background-color: whitesmoke; color: black; width: 12%; border-radius: 5px;" id="resultado_santos"></div>
+
+    <div style="background-color: green; color: white; width: 11%; border-radius: 5px;" id="resultado_palmeiras"></div>
+</center>
+    
+</body>
+</html>
+
+<script>
+
+    function falar_sobre() {
+
+        resultado_corinthians.innerHTML = ""
+
+        resultado_sp.innerHTML = ""
+
+        resultado_santos.innerHTML = ""
+
+        resultado_palmeiras.innerHTML = ""
+
+
+        if (Times.value == "Salve o Corinthians") {
+            resultado_corinthians.innerHTML = "Salve o Corinthians"
+        }else if (Times.value == "Salve o Tricolor paulista") {
+            resultado_sp.innerHTML = "Salve o Tricolor paulista"
+        }else if (Times.value == "Agora que dá a bola é o Santos") {
+            resultado_santos.innerHTML = "Agora que dá a bola é o Santos"
+        }else if (Times.value == "Salve o alviverde imponente") {
+            resultado_palmeiras.innerHTML = "Salve o alviverde imponente"
+        }
+    }
+</script>

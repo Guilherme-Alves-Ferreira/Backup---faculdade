@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme's Machine</title>
+
+    <style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    overflow: hidden;
+}
+
+.header{
+    background: #333;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: cyan 3px solid;
+}
+.header a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+.header .title-header{
+    float: left;
+}
+
+.header .title-header h1 span{
+    color: cyan;
+    margin: 0;
+    margin-left: 630px;
+}
+
+.nav{
+    float: right;
+    margin-top: 10px;
+}
+
+.header a{
+    color: cyan;
+    font-weight: bold;
+}
+
+.box1 {
+        background-color: #333;
+        width: 25%;
+        height: 600px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border: cyan 5px solid;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.box1 h3{
+        color:#fff;
+}
+
+.box1 b{
+        color:#fff
+}
+
+#demo1 {
+        background-color: transparent;
+        border: none;
+        border-bottom: cyan 2px solid;
+}
+
+#demo2 {
+        display: none;
+        background-color:
+        #fff;
+        border-radius: 5px;
+        padding: 5px;
+        color: black;
+        width: 45%;
+        height: 40px;
+        font-weight: 500;
+}
+
+#demo3 {
+        display: none;
+        background-color:
+        #fff;
+        border-radius: 5px;
+        padding: 5px;
+        color: black;
+        width: 45%;
+        height: 40px;
+        font-weight: 500;
+}
+
+#demo4 {
+        display: none;
+        background-color:
+        #fff;
+        border-radius: 5px;
+        padding: 5px;
+        color: black;
+        width: 65%;
+        height: 40px;
+        font-weight: 500;
+}
+
+#butt_converter {
+        outline: none;
+        background-color: transparent;
+        border: cyan 2px solid;
+        height: 30px; width: 120px;
+        color: cyan;
+        font-weight: bold;
+}
+
+.inputbox input{
+    width: 35%;
+    height: 10px;
+    padding: 10px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid cyan;
+    outline: none;
+    background: transparent;
+}
+
+.inputbox label{
+    position: absolute;
+    padding: 0px 0;
+    letter-spacing: 1px;
+    margin-left: -160px;
+    font-size: 18px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+#cpf_label{
+    letter-spacing: 5px;
+}
+
+.inputbox input:focus ~ #cpf_label,
+.inputbox input:valid ~ #cpf_label{
+    top: 240px;
+    color: #03a9f4;
+    font-size: 12px;
+}
+
+
+</style>
+</head>
+<body>
+    
+        <div class="header">
+                <div class="container">
+                        <div class="title-header">
+                                <h1><span>Guilherme's</span> Machine</h1>
+
+                        </div>
+                </div>
+        </div>
+
+<br><br>
+
+<center>
+<div class="box1">
+
+<br>
+
+        <h3>Decimal</h3>
+        <div class="inputbox">
+                <input id="demo1" type="text">
+                <label id="cpf_label">Decimal</label>
+            </div>
+
+        <h3>converter para:</h3>
+        <label id="label_decimal"></label>
+        <input onclick="aparecer_octal()" type="checkbox"><b>Octal</b>
+<br>
+        <div id="demo2"></div>
+
+<br><br>
+
+        <input onclick="aparecer_hexa()" type="checkbox"><b>Hexadecimal</b>
+<br>
+        <div id="demo3"></div>
+        
+<br><br>
+
+        <input onclick="aparecer_bin()" type="checkbox"><b>Binário</b>
+<br>
+        <div id="demo4"></div>
+
+<br><br>
+
+<button id="butt_converter" onmouseover="aumentar()" onmouseout="diminuir()" onclick="converter()">Converter</button>
+</div>
+    </center>
+</body>
+</html>
+
+<script>
+
+function converter() {
+    
+    var decimal = Number (demo1.value);
+
+let octal = decimal.toString(8);
+
+let hexadecimal = decimal.toString(16);
+
+let binaria = decimal.toString(2);
+
+console.log (decimal);
+console.log (octal);
+console.log (hexadecimal);
+console.log (binaria);
+
+document.getElementById("demo1").innerHTML = `O valor em Decimal é = ${decimal}`;
+document.getElementById("demo2").innerHTML = `O valor em octal é = ${octal}`;
+document.getElementById("demo3").innerHTML = `O valor em hexadecimal é = ${hexadecimal}`;
+document.getElementById("demo4").innerHTML = `O valor em binario é = ${binaria}`;
+document.bgColor = "#fff";
+
+}
+
+function aparecer_bin() {
+    demo4.style.display = 'block'
+}
+
+function aparecer_hexa() {
+    demo3.style.display = 'block'
+}
+
+function aparecer_octal() {
+    demo2.style.display = 'block'
+}
+
+function aumentar() {
+    butt_converter.style.height = '40px'
+    butt_converter.style.width = '130px'
+}
+
+function diminuir() {
+    butt_converter.style.height = '30px'
+    butt_converter.style.width = '120px'
+}
+
+</script>

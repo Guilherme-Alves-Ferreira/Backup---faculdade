@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Divisor</h1>
+
+        <br>
+
+        <div>Números pares:<b id="b_pares">0</b></div>
+
+        <br><br>
+
+        <div>Números ímpares:<b id="b_impares">0</b></div>
+
+        <br><br>
+
+        <button onclick="sortear()">Sortear número</button>
+
+        <h1 id="resultado"></h1>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    var pares = 0;
+
+    var impares = 0;
+
+    function sortear() {
+
+        var numero_sorteado = parseInt (Math.random() *100) +1;
+
+        if (numero_sorteado % 2 == 0) {
+            ++pares;
+            b_pares.innerHTML = pares;
+            resultado.innerHTML = numero_sorteado;
+        }else {
+            ++impares;
+            b_impares.innerHTML = impares;
+            resultado.innerHTML = numero_sorteado;
+        }
+    }
+</script>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Provinha 2</h1>
+        <br>
+        <input type="text" placeholder="Nome do 1º Artista" id="inpt_nome1">
+        <br>
+        <input type="text" placeholder="Música do 1º Artista" id="inpt_musica1">
+        <br>
+        <input type="text" placeholder="Data de lançamento de música (mm/dd/aaaa)" id="inpt_data1"
+            style="width: 270px;">
+        <br><br>
+        <input type="text" placeholder="Nome do 2º Artista" id="inpt_nome2">
+        <br>
+        <input type="text" placeholder="Música do 2º Artista" id="inpt_musica2">
+        <br>
+        <input type="text" placeholder="Data de lançamento de música (mm/dd/aaaa)" id="inpt_data2"
+            style="width: 270px;">
+        <br><br>
+        <button onclick="cadastrar()">Cadastrar</button>
+        <br><br>
+        <div style="display: none;" id="div_botoes">
+            <button onclick="btn_artista1()">Artista 1 (+50 Views)</button>
+            <br><br>
+            <button onclick="btn_artista2()">Artista 2 (+50 Views)</button>
+        </div>
+        <br><br>
+        <div id="div_resultados">
+            <span id="resultado1"></span>
+            <br>
+            <span id="resultado2"></span>
+        </div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    var artista1 = {
+        nome: inpt_nome1.value,
+        musica: inpt_musica1.value,
+        qtd_views: 0,
+    };
+
+    var artista2 = {
+        nome: inpt_nome2.value,
+        musica: inpt_musica2.value,
+        qtd_views: 0,
+    };
+
+    function cadastrar() {
+
+        artista1.nome = inpt_nome1.value;
+        artista1.musica = inpt_musica1.value;
+
+        artista2.nome = inpt_nome2.value;
+        artista2.musica = inpt_musica2.value;
+
+        div_botoes.style.display = 'block';
+
+    }
+
+    function btn_artista1() {
+
+        div_resultados.style.display = 'block';
+
+        artista1.qtd_views = artista1.qtd_views + 50;
+
+        var data_agora1 = new Date().getTime();
+        var data_antes1 = Number (new Date(inpt_data1.value).getTime());
+        var diferenca1 = parseInt((data_agora1 - data_antes1) / 1000 / 60 / 60 / 24);
+
+        resultado1.innerHTML = `Visualizações da música <b>${artista1.musica}</b> de <b>${artista1.nome}</b>: <u>${artista1.qtd_views}</u> (Média de <b>${(artista1.qtd_views / diferenca1).toFixed(1)}</b> views/dia)`;
+
+
+    }
+
+    function btn_artista2() {
+
+        div_resultados.style.display = 'block';
+
+        artista2.qtd_views = artista2.qtd_views + 50;
+
+        var data_agora2 = new Date().getTime();
+        var data_antes2 = Number (new Date(inpt_data2.value).getTime());
+        var diferenca2 = parseInt((data_agora2 - data_antes2) / 1000 / 60 / 60 / 24);
+
+        resultado2.innerHTML = `Visualizações da música <b>${artista2.musica}</b> de <b>${artista2.nome}</b>: <u>${artista2.qtd_views}</u> (Média de <b>${(artista2.qtd_views / diferenca2).toFixed(1)}</b> views/dia)`;
+    }
+</script>
