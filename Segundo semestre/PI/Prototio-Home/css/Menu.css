@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* MENU */
+
+.header {
+    width: 100%;
+    height: 6vh;
+    background: #111111;
+    border-bottom: 2px solid rgba(51, 51, 51, 0.25);
+    position: fixed;
+    padding: 10px;
+}
+
+/* -------------------------- PARTIÇÕES ------------------------------------------ */
+
+/* -------------------------- LADO ESQUERDO ------------------------------------------ */
+
+.header .left_content { /* Conteúdo do lado esquerdo do menu */
+    float: left;
+    width: 11vw;
+    min-width: 10vw;
+    height: 6vh;
+    display: block;
+    padding-top: 13px;
+    color: #F9F9F9;
+}
+
+#icon {  /* Ícone da riot */
+    width: 160px;
+    height: 160px;
+    background: url(https://lolstatic-a.akamaihd.net/riotbar/live/1.1.3/images/navigation/fistsprite.png) 0 -2400px no-repeat;
+    transition: background-position 0.25s steps(15, end);
+    transform: scale(0.33);
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    float: left;
+}
+
+.header .left_content i { /* Flecha do sub menu */
+    opacity: 0.5;
+    transition: 0.4s;
+    float: left;
+    margin: 10px 0 0 80px;
+}
+
+.separator {
+    width: 1px;
+    height: 30px;
+    margin: 2px 0 0 110px;
+    position: absolute;
+    border-left: 2px solid #7E7E7E;
+    opacity: 0.5;
+}
+
+.header .left_content a { /* Ícone do valorant */
+    margin-left: 50px;
+
+}
+
+/* -------------------------- CENTRO ------------------------------------------ */
+
+.header .center_content { /* Conteúdo ao centro do menu */
+    float: left;
+    width: 70vw;
+    min-width: 70vw;
+    height: 6vh;
+    display: block;
+}
+
+.header .center_content ul { /* Lista de tópicos */
+
+    display: flex;
+    padding: 10px;
+}
+
+.header .center_content ul li { /* Estilização dos tópicos */
+    list-style: none;
+    margin: 0 50px 0 0px;
+    color: #F9F9F9;
+    font-weight: 500;
+    font-size: 90%;
+    transition: 0.4s;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.header .center_content ul li:hover { /* Estilização dos tópicos durante a sobreposição do mouse */
+    border-bottom: 2px solid #eb4d4b;
+    transition: 0.4s;
+}
+
+.header .center_content ul i { /* Estilização das flechas de sub menu */
+    color: #F9F9F9;
+    opacity: 0.5;
+    transition: 0.4s;
+    padding-left: 5px   ;
+}
+
+.header .center_content ul li:hover i { /* Estilização das flechas de sub menu durante a sobreposição do mouse */
+    transition: 0.4s;
+    opacity: 1;
+}
+
+/* -------------------------- LADO DIREITO ------------------------------------------ */
+
+.header .right_content { /* Conteúdo do lado direito do menu */
+    float: left;
+    width: 10vw;
+    min-width: 10vw;
+    height: 6vh;
+    margin: 0 1vw 0 2vw;
+    display: block;
+}
+
+.header .right_content a {
+    position: absolute;
+    margin: 20px 0 0 70px;
+}
+
+#btn_play_menu {        /* Botão "JOGUE AGORA" */
+    width: 7vw;
+    height: 4.3vh;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    font-size: 80%;
+    color: #ece8e1;
+    background: #eb4d4b;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 8px 0 0 120px;
+    border-radius: 3px;
+    position: absolute;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #111111;
+    height: 20vw;
+    width: 100%;
+    border-top: 2px solid rgba(51, 51, 51, 0.25);
+    bottom: 0;
+    padding: 30px 0;
+}
+
+.footer #link_download {             /* Link para download do jogo */
+    text-decoration: none;
+    color: #7E7E7E;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.footer svg {             /* Marca da RIOT */
+    margin-top: 40px;
+}
+ 
+.footer p {             /* Direitos autorais */
+    margin-top: 40px;
+    color: #7E7E7E;
+    text-align: center;
+    width: 500px;
+    font-size: 80%;
+}
+
+.footer .politicas {             /* Políticas de privacidade e uso */
+    margin-top: 40px;
+}
+
+.footer .link_politicas {             /* Link das políticas de privacidade e uso */
+    font-size: 70%;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #7E7E7E;
+}
+
+.footer #faixa_etaria {             /* Link e imagem da faixa etária */
+    margin-top: 40px;
+}
+
